@@ -185,52 +185,121 @@ a.row span { display: block; font-size: 12px; color: var(--muted); margin-top: 4
 }
 .site-row button[aria-pressed="true"] { background: var(--amber); color: #16120a; border-color: var(--amber); }
 
-</style>
+  </style>
+  <style>
+    .pane { display: none; margin-top: 8px; }
+    .pane.on { display: block; }
+    .call {
+      display: block; background: var(--panel); border: 1px solid var(--line);
+      border-radius: 14px; padding: 14px 16px; margin: 0 0 8px;
+      text-decoration: none; color: inherit;
+    }
+    .call.panic { border-color: var(--hs-red); box-shadow: inset 4px 0 0 var(--hs-red); }
+    .call .who { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+    .call .num { font-family: "Barlow Condensed", sans-serif; font-size: 28px; font-weight: 800; color: #fff; }
+    .call .sub { font-size: 13px; color: var(--muted); margin-top: 4px; }
+    .meet { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; margin: 0 0 10px; }
+    .meet h3 { margin: 0 0 8px; font-family: "Barlow Condensed", sans-serif; text-transform: uppercase; letter-spacing: .06em; font-size: 15px; color: var(--hs-red); }
+    .meet p { margin: 0 0 6px; font-size: 15px; }
+  </style>
 </head>
 <body>
   <header class="sub">
     <div class="brand"><img src="logo-header.png" alt="HubStarr Logistics" /></div>
     <a href="index.html">← Compliance Corner</a>
     <h1>Emergency</h1>
-    <p>Tap what you need.</p>
+    <p>Tap one. Numbers dial.</p>
   </header>
   <div class="wrap grid">
     <a class="card emg" href="tel:911">
       <div class="ico">911</div>
-      <div class="copy">
-        <h2>Life-threatening</h2>
-        <p>Call 911 now.</p>
-      </div>
+      <div class="copy"><h2>Life-threatening</h2><p>Call 911 now.</p></div>
     </a>
-    <a class="card emg" href="emergency-injury.html">
+
+    <button class="card emg linklike" type="button" onclick="show('injury')">
       <div class="ico">RN</div>
-      <div class="copy">
-        <h2>Injured employee</h2>
-        <p>Nurse line + Goodyear clinic.</p>
-      </div>
-    </a>
-    <a class="card emg" href="emergency-call.html">
+      <div class="copy"><h2>Injured employee</h2><p>Nurse line + clinic.</p></div>
+    </button>
+    <div id="injury" class="pane">
+      <a class="call panic" href="tel:8773110074">
+        <div class="who">Central nurse line 24/7</div>
+        <div class="num">877-311-0074</div>
+        <div class="sub">Injured worker and supervisor call together</div>
+      </a>
+      <a class="call" href="tel:6234041575">
+        <div class="who">Concentra Goodyear</div>
+        <div class="num">623-404-1575</div>
+        <div class="sub">2403 N. Pebble Creek Pkwy, Ste 101 · Mon–Fri 8–5</div>
+      </a>
+      <a class="call" href="tel:6022449500">
+        <div class="who">If closed — Airport Phoenix 24/7</div>
+        <div class="num">602-244-9500</div>
+      </a>
+    </div>
+
+    <button class="card emg linklike" type="button" onclick="show('call')">
       <div class="ico">TEL</div>
-      <div class="copy">
-        <h2>HubStarr contacts</h2>
-        <p>Ruben · Corbin</p>
-      </div>
-    </a>
-    <a class="card blt" href="emergency-maps.html">
+      <div class="copy"><h2>HubStarr contacts</h2><p>Ruben · Corbin</p></div>
+    </button>
+    <div id="call" class="pane">
+      <a class="call" href="tel:6235234613">
+        <div class="who">EAP — Ruben Urias</div>
+        <div class="num">623-523-4613</div>
+      </a>
+      <a class="call" href="tel:4802177949">
+        <div class="who">Alternate — Corbin Christian</div>
+        <div class="num">480-217-7949</div>
+      </a>
+    </div>
+
+    <button class="card blt linklike" type="button" onclick="show('maps')">
       <div class="ico">MAP</div>
-      <div class="copy">
-        <h2>Evac &amp; site maps</h2>
-        <p>Assembly · 9701 · 9501</p>
+      <div class="copy"><h2>Assembly points</h2><p>9701 and 9501 — where to go.</p></div>
+    </button>
+    <div id="maps" class="pane">
+      <div class="meet">
+        <h3>9701 North</h3>
+        <p>Point 1 · Point 2 · Point 3</p>
+        <p>Office → south parking lot</p>
+        <p>Warehouse → north trailer lot</p>
       </div>
-    </a>
-    <a class="card sds" href="emergency-spill.html">
+      <div class="meet">
+        <h3>9501 South</h3>
+        <p>Point A · Point B · Point C · Point E</p>
+      </div>
+      <a class="call" href="tel:4806276200">
+        <div class="who">Local fire</div>
+        <div class="num">480-627-6200</div>
+      </a>
+      <a class="call" href="tel:6232224000">
+        <div class="who">Surprise Police</div>
+        <div class="num">623-222-4000</div>
+      </a>
+    </div>
+
+    <button class="card sds linklike" type="button" onclick="show('spill')">
       <div class="ico">SPL</div>
-      <div class="copy">
-        <h2>Spill</h2>
-        <p>Kit + who to call.</p>
+      <div class="copy"><h2>Spill</h2><p>Kit + who to call.</p></div>
+    </button>
+    <div id="spill" class="pane">
+      <div class="meet">
+        <h3>Small</h3>
+        <p>41-gallon mobile kit. FastField Chemical Spill Response. Tell the supervisor.</p>
       </div>
-    </a>
+      <div class="meet">
+        <h3>Large or someone hurt</h3>
+        <p>Back out. 911 if needed. Then Ruben.</p>
+      </div>
+      <a class="call" href="tel:911"><div class="who">Danger to people</div><div class="num">911</div></a>
+      <a class="call" href="tel:6235234613"><div class="who">EAP — Ruben</div><div class="num">623-523-4613</div></a>
+    </div>
   </div>
-  <footer>Preview · Glendale</footer>
+  <script>
+    function show(id) {
+      document.querySelectorAll(".pane").forEach(function (el) {
+        el.classList.toggle("on", el.id === id ? !el.classList.contains("on") : false);
+      });
+    }
+  </script>
 </body>
 </html>
