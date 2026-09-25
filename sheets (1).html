@@ -377,7 +377,7 @@ a.row span { display: block; font-size: 12px; color: var(--muted); margin-top: 4
     list.innerHTML = shown.map(function (row, i) {
       const it = row.it;
       const cls = typing && i === 0 ? "row best" : "row";
-      return "<a class='" + cls + "' href='/" + encodeURI((it.file || "").split("/").pop()) + "'>" +
+      return "<a class='" + cls + "' href='/" + encodeURI((it.file || '').split('/').pop()) + "'>" +
         "<strong>" + highlight(it.name, term) + "</strong>" +
         "<span>" + it.group + (typing && i === 0 ? " · best match" : "") + "</span></a>";
     }).join("");
