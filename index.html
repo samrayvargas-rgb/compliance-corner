@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#1B365D" />
+  <title>HubStarr Compliance Corner</title>
+  <link rel="stylesheet" href="corner.css" />
+</head>
+<body>
+  <header>
+    <p class="kicker">HubStarr Logistics</p>
+    <h1>Compliance Corner</h1>
+    <p>SDS, emergency info, bulletins, SOPs, training.</p>
+  </header>
+  <div class="wrap">
+    <a class="card sds" href="sds.html">
+      <span class="tag public">No login</span>
+      <h2>Safety Data Sheets</h2>
+      <p>Type a few letters. Tap the sheet. 57 on file.</p>
+    </a>
+
+    <button class="card sds linklike" type="button" onclick="toggle('howto')">
+      <span class="tag public">No login</span>
+      <h2>How to read an SDS</h2>
+      <p>16 sections. In an emergency start with 2, 4, 6, and 8.</p>
+    </button>
+    <div id="howto" class="panel">
+      <h3>Use these first</h3>
+      <ul>
+        <li><strong>Section 2 — Hazard(s).</strong> Pictograms, signal word (Danger / Warning), what it can do to you.</li>
+        <li><strong>Section 4 — First aid.</strong> Eyes, skin, inhale, swallow. Take this page to medical if someone is hurt.</li>
+        <li><strong>Section 6 — Spill.</strong> What to do, what not to mix it with, who to call.</li>
+        <li><strong>Section 8 — PPE.</strong> Gloves, glasses, respirator — what the sheet requires.</li>
+      </ul>
+      <h3 style="margin-top:14px">Then these on the job</h3>
+      <ul>
+        <li><strong>1 Identification</strong> — product name; must match the label on the container.</li>
+        <li><strong>3 Composition</strong> — what is in it.</li>
+        <li><strong>5 Fire-fighting</strong> — extinguisher type, what not to use.</li>
+        <li><strong>7 Handling &amp; storage</strong> — where it belongs, incompatibles (AZ-204 / AZ-190).</li>
+        <li><strong>9–11</strong> — physical properties, reactivity, health effects.</li>
+        <li><strong>13 Disposal</strong> — not the trash or drain unless the sheet says so.</li>
+        <li><strong>14 Transport</strong> — UN number / shipping name if it leaves the building.</li>
+        <li><strong>12, 15, 16</strong> — environment, regulations, other.</li>
+      </ul>
+      <p class="note">If the name on the jug does not match Section 1, stop and get a supervisor. No SDS on file → do not use the product.</p>
+    </div>
+
+    <button class="card emg linklike" type="button" onclick="toggle('emergency')">
+      <span class="tag public">No login</span>
+      <h2>Emergency</h2>
+      <p>Contacts, assembly points, spill kit, eyewash / AED.</p>
+    </button>
+    <div id="emergency" class="panel">
+      <h3>Call first</h3>
+      <ul>
+        <li>Life-threatening: <span class="phone">911</span></li>
+        <li>EAP administrator: Ruben Urias <span class="phone">623-523-4613</span></li>
+        <li>Alternate: Corbin Christian <span class="phone">480-217-7949</span></li>
+      </ul>
+      <h3 style="margin-top:14px">Assembly</h3>
+      <ul>
+        <li><strong>Glendale office:</strong> south parking lot</li>
+        <li><strong>Glendale warehouse:</strong> north trailer lot</li>
+        <li><strong>Denver:</strong> follow the posted map at this board</li>
+      </ul>
+      <h3 style="margin-top:14px">On the floor</h3>
+      <ul>
+        <li>Incidental spill: 41-gallon mobile kit — FastField Chemical Spill Response</li>
+        <li>Larger spill / injury: EAP / AZ-099</li>
+        <li>Eyewash and AED locations are on the posted map</li>
+      </ul>
+    </div>
+
+    <a class="card blt" href="bulletins.html">
+      <span class="tag public">No login</span>
+      <h2>Safety bulletins</h2>
+      <p>Active alerts only. Folder is empty until you add files.</p>
+    </a>
+
+    <a class="card emp" href="sop.html">
+      <span class="tag login">Add zip later</span>
+      <h2>SOPs &amp; work instructions</h2>
+      <p>Same search as SDS once the zip is loaded.</p>
+    </a>
+
+    <a class="card emp" href="training.html">
+      <span class="tag login">Add zip later</span>
+      <h2>Training</h2>
+      <p>Job aids only. Not the training matrix.</p>
+    </a>
+
+    <p class="note">
+      If this page or Wi-Fi is down, use the paper SDS binder in the cabinet on this board.
+      Security and TAPA procedures are not on this site.
+    </p>
+  </div>
+  <footer>HubStarr Compliance Corner · Uncontrolled if printed</footer>
+  <script>
+    function toggle(id) { document.getElementById(id).classList.toggle("on"); }
+  </script>
+</body>
+</html>

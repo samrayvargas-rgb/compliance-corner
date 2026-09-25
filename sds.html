@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#1B365D" />
+  <title>SDS Library · HubStarr</title>
+  <link rel="stylesheet" href="corner.css" />
+</head>
+<body>
+  <header>
+    <a href="index.html">← Compliance Corner</a>
+    <h1>Safety Data Sheets</h1>
+  </header>
+  <div class="wrap">
+    <label class="sr" for="q">Type a few letters</label>
+    <input type="search" id="q" placeholder="brake, clorox, battery…" autocomplete="off" autocorrect="off" spellcheck="false" />
+    <p class="hint">Matches as you type. Tap the one you want.</p>
+    <div class="chips" id="chips"></div>
+    <p class="count" id="count"></p>
+    <div id="list"></div>
+    <p class="count">Paper backup is the binder on this board. No SDS for a product in use — do not use it.</p>
+  </div>
+  <script>
+    window.HS_SEARCH = {
+      folder: "sds",
+      empty: "SDS files are not on this site yet.",
+      noMatch: "Nothing matches those letters. Try the brand (Zep, CRC, Clorox) or check the binder.",
+      aliases: {
+        "clorox": ["bleach"],
+        "wd-40": ["wd40", "wd 40"],
+        "gojo": ["orange soap", "hand soap"],
+        "googone": ["goo gone"],
+        "simple green": ["simplegreen"],
+        "crc brake cleaner": ["brake", "brakes"],
+        "blue def": ["def", "diesel exhaust"],
+        "peak": ["antifreeze", "coolant"],
+        "dex cool": ["dexcool", "antifreeze", "coolant"],
+        "rotella": ["oil", "engine oil", "15w40"],
+        "unleaded gasoline": ["gas", "gasoline"],
+        "panasonic": ["battery", "lithium", "li-ion", "2170"],
+        "samsung": ["battery", "lithium", "li-ion"],
+        "citric": ["acid"],
+        "sika": ["primer", "waymo"],
+        "zep": ["degreaser", "concrete"],
+        "talak": ["insecticide"]
+      }
+    };
+  </script>
+  <script src="search.js"></script>
+</body>
+</html>

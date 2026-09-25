@@ -1,0 +1,287 @@
+[
+  {
+    "group": "ASM",
+    "name": "Dynalene EG 10 22 24",
+    "file": "ASM/Dynalene-EG-SDS-10-22-24.pdf"
+  },
+  {
+    "group": "Garage",
+    "name": "3825 Pink Wash",
+    "file": "Garage/3825_Pink-Wash-_SDS.pdf"
+  },
+  {
+    "group": "Garage",
+    "name": "GoJo natural orange",
+    "file": "Garage/GoJo_natural_orange_SDS.pdf"
+  },
+  {
+    "group": "Garage",
+    "name": "GooGone",
+    "file": "Garage/GooGone.pdf"
+  },
+  {
+    "group": "Garage",
+    "name": "Orhto Home Defense",
+    "file": "Garage/Orhto_Home_Defense.pdf"
+  },
+  {
+    "group": "Garage",
+    "name": "Peak LL 50 50 2 16 16",
+    "file": "Garage/Peak_LL_50-50_SDS_2-16-16.pdf"
+  },
+  {
+    "group": "Garage",
+    "name": "Armor All Leather Care Spray 2020 10 27",
+    "file": "Garage/SDS_Armor_All_Leather_Care_Spray_US_en_2020_10_27.pdf"
+  },
+  {
+    "group": "Garage",
+    "name": "AU SimpleGreenAllPurposeCleaner",
+    "file": "Garage/SDS_EN-AU_SimpleGreenAllPurposeCleaner.pdf"
+  },
+  {
+    "group": "Garage",
+    "name": "Turtle wax Spray Detailer",
+    "file": "Garage/Turtle_wax_Spray_Detailer.pdf"
+  },
+  {
+    "group": "Garage",
+    "name": "Unleaded Gasoline",
+    "file": "Garage/Unleaded_Gasoline.pdf"
+  },
+  {
+    "group": "Garage",
+    "name": "Valspar Protective sealer",
+    "file": "Garage/Valspar_Protective_sealer.pdf"
+  },
+  {
+    "group": "Garage",
+    "name": "ZEP Concrete cleaner ZUCON128",
+    "file": "Garage/ZEP_Concrete_cleaner_ZUCON128_-_MSDS_-_EN_-_US.pdf"
+  },
+  {
+    "group": "Garage",
+    "name": "chemical guys c4 clear cut correction compound 16oz 95231761",
+    "file": "Garage/chemical-guys-sds-c4-clear-cut-correction-compound-16oz-95231761.pdf"
+  },
+  {
+    "group": "Garage",
+    "name": "chemical guys light metal polish 36948391",
+    "file": "Garage/chemical-guys-sds-light-metal-polish-36948391.pdf"
+  },
+  {
+    "group": "Garage",
+    "name": "chemical guys new car smell air freshener 83175522",
+    "file": "Garage/chemical-guys-sds-new-car-smell-air-freshener-83175522.pdf"
+  },
+  {
+    "group": "Garage",
+    "name": "chemical guys nice and wet tire shine protective coating 11868506",
+    "file": "Garage/chemical-guys-sds-nice-and-wet-tire-shine-protective-coating-11868506.pdf"
+  },
+  {
+    "group": "Garage",
+    "name": "chemical guys p4 precision paint perfection polish 16oz 74945636",
+    "file": "Garage/chemical-guys-sds-p4-precision-paint-perfection-polish-16oz-74945636.pdf"
+  },
+  {
+    "group": "General",
+    "name": "3M Hi Stregnth Adhesive spray",
+    "file": "General/3M_Hi_Stregnth_Adhesive_spray.pdf"
+  },
+  {
+    "group": "General",
+    "name": "Blue DEF",
+    "file": "General/Blue_DEF.pdf"
+  },
+  {
+    "group": "General",
+    "name": "Bondo All Purpose Putty",
+    "file": "General/Bondo_All_Purpose_Putty.pdf"
+  },
+  {
+    "group": "General",
+    "name": "CRC Brake Cleaner",
+    "file": "General/CRC_Brake_Cleaner.pdf"
+  },
+  {
+    "group": "General",
+    "name": "Clorox",
+    "file": "General/Clorox-MSDS.pdf"
+  },
+  {
+    "group": "General",
+    "name": "DG Form Lectric",
+    "file": "General/DG_Form_Lectric.pdf"
+  },
+  {
+    "group": "General",
+    "name": "FLEX SEAL",
+    "file": "General/FLEX_SEAL_MSDS.PDF"
+  },
+  {
+    "group": "General",
+    "name": "Fabuloso All Purpose Cleaner",
+    "file": "General/Fabuloso_All_Purpose_Cleaner.pdf"
+  },
+  {
+    "group": "General",
+    "name": "Floor Science Neutral Floor Cleaner",
+    "file": "General/Floor_Science_Neutral_Floor_Cleaner.pdf"
+  },
+  {
+    "group": "General",
+    "name": "GOJO 404012S",
+    "file": "General/GOJO_404012S_SDS.PDF"
+  },
+  {
+    "group": "General",
+    "name": "Granular Citric Acid ADM",
+    "file": "General/Granular_Citric_Acid_ADM_SDS.pdf"
+  },
+  {
+    "group": "General",
+    "name": "Great Stuff Gaps Cracks 4 17 23",
+    "file": "General/Great_Stuff_Gaps-Cracks_SDS_4-17-23.pdf"
+  },
+  {
+    "group": "General",
+    "name": "Loctite PL Concrete Self Leveling Polyurethane Sealant 2298852",
+    "file": "General/Loctite-PL-Concrete-Self-Leveling-Polyurethane-Sealant-SDS-2298852.pdf"
+  },
+  {
+    "group": "General",
+    "name": "SCRUBBING BUBBLES",
+    "file": "General/MSDS-SCRUBBING_BUBBLES.pdf"
+  },
+  {
+    "group": "General",
+    "name": "OXYCLEAN",
+    "file": "General/OXYCLEAN.pdf"
+  },
+  {
+    "group": "General",
+    "name": "Oreilly Dex Cool Coolant",
+    "file": "General/Oreilly_Dex_Cool_Coolant_SDS.pdf"
+  },
+  {
+    "group": "General",
+    "name": "Peak European Antifreeze 50 50",
+    "file": "General/Peak_European_Antifreeze_50-50.pdf"
+  },
+  {
+    "group": "General",
+    "name": "PowersmithBatteries",
+    "file": "General/PowersmithBatteries-MSDS.pdf"
+  },
+  {
+    "group": "General",
+    "name": "249 200118 C Sika Primer 217 LUM 4.0 14.07.2023 5293 Waymo",
+    "file": "General/SDS_249-200118-C_Sika_Primer-217_LUM_US_en_4.0_14.07.2023_5293_-_Waymo.pdf"
+  },
+  {
+    "group": "General",
+    "name": "SUMCO",
+    "file": "General/SUMCO_SDS.pdf"
+  },
+  {
+    "group": "General",
+    "name": "Samsung",
+    "file": "General/Samsung.pdf"
+  },
+  {
+    "group": "General",
+    "name": "Samsung SDI",
+    "file": "General/Samsung_SDI.pdf"
+  },
+  {
+    "group": "General",
+    "name": "Shell Rotella T5 15w40 Oil",
+    "file": "General/Shell_Rotella_T5_15w40_Oil.PDF"
+  },
+  {
+    "group": "General",
+    "name": "Talak 7.9 F 20250908",
+    "file": "General/Talak-7.9-F-SDS_20250908.pdf"
+  },
+  {
+    "group": "General",
+    "name": "Zep Industrial Degreaser",
+    "file": "General/Zep_Industrial_Degreaser.pdf"
+  },
+  {
+    "group": "General",
+    "name": "wd 40",
+    "file": "General/wd-40_MSDS.pdf"
+  },
+  {
+    "group": "Panasonic LI ion",
+    "name": "Panasonic 2170T IBT 00030 26 E p",
+    "file": "Panasonic_LI_ion/Panasonic_2170T-SDS-IBT-00030-26_E_p.pdf"
+  },
+  {
+    "group": "Sumco",
+    "name": "Green Silicon Carbide",
+    "file": "Sumco/Green_Silicon_Carbide_SDS.pdf"
+  },
+  {
+    "group": "Sumco",
+    "name": "Sumco Metal Cleaner",
+    "file": "Sumco/Sumco_Metal_Cleaner_SDS.pdf"
+  },
+  {
+    "group": "Verdisian",
+    "name": "SKU 1000439 Fungi Phite",
+    "file": "Verdisian/SKU_1000439_Fungi-Phite.pdf"
+  },
+  {
+    "group": "Verdisian",
+    "name": "SKU 1000629 PolyAmineCalciumOrganic",
+    "file": "Verdisian/SKU_1000629_PolyAmineCalciumOrganic.pdf"
+  },
+  {
+    "group": "Verdisian",
+    "name": "SKU 1000637 PolyAmineZinc",
+    "file": "Verdisian/SKU_1000637_PolyAmineZinc.pdf"
+  },
+  {
+    "group": "Verdisian",
+    "name": "SKU 1000732 PrimacyAlpha",
+    "file": "Verdisian/SKU_1000732_PrimacyAlpha.pdf"
+  },
+  {
+    "group": "Verdisian",
+    "name": "SKU 1000769 KnockOut UnitedStates",
+    "file": "Verdisian/SKU_1000769_KnockOut_UnitedStates.pdf"
+  },
+  {
+    "group": "Verdisian",
+    "name": "SKU 1000770 OrthoPhosPlus Mexico",
+    "file": "Verdisian/SKU_1000770_OrthoPhosPlus_Mexico.pdf"
+  },
+  {
+    "group": "Verdisian",
+    "name": "SKU 1000908 CROP PLUS",
+    "file": "Verdisian/SKU_1000908_CROP_PLUS_.pdf"
+  },
+  {
+    "group": "Verdisian",
+    "name": "SKU 1001795 ReKoveryFruit 265 gal",
+    "file": "Verdisian/SKU_1001795_ReKoveryFruit_265_gal.pdf"
+  },
+  {
+    "group": "Verdisian",
+    "name": "SKU 1001998 StericP KDS",
+    "file": "Verdisian/SKU_1001998_StericP_KDS.pdf"
+  },
+  {
+    "group": "Verdisian",
+    "name": "SKU 1007345 PolyAmineManganese 265 gal",
+    "file": "Verdisian/SKU_1007345_PolyAmineManganese_265_gal.pdf"
+  },
+  {
+    "group": "Verdisian",
+    "name": "SKU 1007447 Oxy Phos 265 gal",
+    "file": "Verdisian/SKU_1007447_Oxy-Phos_265_gal.pdf"
+  }
+]
