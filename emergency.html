@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#10151c" />
-  <title>HubStarr Compliance Corner</title>
+  <title>Emergency · HubStarr</title>
   <link rel="stylesheet" href="corner.css" />
   <style>
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap");
@@ -188,96 +188,49 @@ a.row span { display: block; font-size: 12px; color: var(--muted); margin-top: 4
 </style>
 </head>
 <body>
-  <header>
+  <header class="sub">
     <div class="brand"><img src="logo-header.png" alt="HubStarr Logistics" /></div>
-    <p class="kicker">Warehouse access</p>
-    <h1>Compliance Corner</h1>
-    <p>SDS, emergency, bulletins, SOPs, and training.</p>
+    <a href="index.html">← Compliance Corner</a>
+    <h1>Emergency</h1>
+    <p>Tap what you need.</p>
   </header>
   <div class="wrap grid">
-    <a class="card sds" href="sheets.html">
-      <div class="ico">SDS</div>
-      <div class="copy">
-        <h2>Safety Data Sheets</h2>
-        <p>Type a few letters. 57 sheets on file.</p>
-      </div>
-      <span class="tag public">Open</span>
-    </a>
-
-    <button class="card how linklike" type="button" onclick="toggle('howto')">
-      <div class="ico">2-8</div>
-      <div class="copy">
-        <h2>How to read an SDS</h2>
-        <p>Emergency: sections 2, 4, 6, and 8 first.</p>
-      </div>
-      <span class="tag public">Open</span>
-    </button>
-    <div id="howto" class="panel">
-      <h3>Use these first</h3>
-      <ul>
-        <li><strong>Section 2 — Hazard(s).</strong> Pictograms, signal word (Danger / Warning), what it can do to you.</li>
-        <li><strong>Section 4 — First aid.</strong> Eyes, skin, inhale, swallow. Take this page to medical if someone is hurt.</li>
-        <li><strong>Section 6 — Spill.</strong> What to do, what not to mix it with, who to call.</li>
-        <li><strong>Section 8 — PPE.</strong> Gloves, glasses, respirator — what the sheet requires.</li>
-      </ul>
-      <h3 style="margin-top:14px">Then these on the job</h3>
-      <ul>
-        <li><strong>1 Identification</strong> — product name; must match the label on the container.</li>
-        <li><strong>3 Composition</strong> — what is in it.</li>
-        <li><strong>5 Fire-fighting</strong> — extinguisher type, what not to use.</li>
-        <li><strong>7 Handling &amp; storage</strong> — where it belongs, incompatibles (AZ-204 / AZ-190).</li>
-        <li><strong>9–11</strong> — physical properties, reactivity, health effects.</li>
-        <li><strong>13 Disposal</strong> — not the trash or drain unless the sheet says so.</li>
-        <li><strong>14 Transport</strong> — UN number / shipping name if it leaves the building.</li>
-        <li><strong>12, 15, 16</strong> — environment, regulations, other.</li>
-      </ul>
-      <p class="note">If the name on the jug does not match Section 1, stop and get a supervisor. No SDS on file → do not use the product.</p>
-    </div>
-
-    <a class="card emg" href="emergency.html">
+    <a class="card emg" href="tel:911">
       <div class="ico">911</div>
       <div class="copy">
-        <h2>Emergency</h2>
-        <p>Call · injury · maps · spill</p>
+        <h2>Life-threatening</h2>
+        <p>Call 911 now.</p>
       </div>
-      <span class="tag public">Open</span>
     </a>
-
-    <a class="card blt" href="bulletins.html">
-      <div class="ico">ALRT</div>
+    <a class="card emg" href="emergency-injury.html">
+      <div class="ico">RN</div>
       <div class="copy">
-        <h2>Safety bulletins</h2>
-        <p>Active alerts only. Empty until you add files.</p>
+        <h2>Injured employee</h2>
+        <p>Nurse line + Goodyear clinic.</p>
       </div>
-      <span class="tag soon">Soon</span>
     </a>
-
-    <a class="card emp" href="sop.html">
-      <div class="ico">SOP</div>
+    <a class="card emg" href="emergency-call.html">
+      <div class="ico">TEL</div>
       <div class="copy">
-        <h2>SOPs &amp; work instructions</h2>
-        <p>Same search as SDS once the zip is loaded.</p>
+        <h2>HubStarr contacts</h2>
+        <p>Ruben · Corbin</p>
       </div>
-      <span class="tag soon">Soon</span>
     </a>
-
-    <a class="card trn" href="training.html">
-      <div class="ico">TRN</div>
+    <a class="card blt" href="emergency-maps.html">
+      <div class="ico">MAP</div>
       <div class="copy">
-        <h2>Training</h2>
-        <p>Job aids only. Not the training matrix.</p>
+        <h2>Evac &amp; site maps</h2>
+        <p>Assembly · 9701 · 9501</p>
       </div>
-      <span class="tag soon">Soon</span>
     </a>
-
-    <p class="note">
-      If this page or Wi-Fi is down, use the paper SDS binder in the cabinet on this board.
-      Security and TAPA procedures are not on this site.
-    </p>
+    <a class="card sds" href="emergency-spill.html">
+      <div class="ico">SPL</div>
+      <div class="copy">
+        <h2>Spill</h2>
+        <p>Kit + who to call.</p>
+      </div>
+    </a>
   </div>
-  <footer>HubStarr Compliance Corner · Uncontrolled if printed</footer>
-  <script>
-    function toggle(id) { document.getElementById(id).classList.toggle("on"); }
-  </script>
+  <footer>Preview · Glendale</footer>
 </body>
 </html>

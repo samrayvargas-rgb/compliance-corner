@@ -16,3 +16,8 @@
   [headers.values]
     X-Robots-Tag = "noindex, nofollow"
     Referrer-Policy = "no-referrer"
+
+[[redirects]]
+  from = "/emergency"
+  to = "/emergency.html"
+  status = 200
