@@ -1,0 +1,18 @@
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/sds"
+  to = "/sheets.html"
+  status = 200
+
+[[redirects]]
+  from = "/sds/"
+  to = "/sheets.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+    Referrer-Policy = "no-referrer"
