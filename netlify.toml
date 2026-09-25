@@ -17,6 +17,18 @@
     X-Robots-Tag = "noindex, nofollow"
     Referrer-Policy = "no-referrer"
 
+[[headers]]
+  for = "/*.pdf"
+  [headers.values]
+    Content-Type = "application/pdf"
+    Content-Disposition = "inline"
+
+[[headers]]
+  for = "/*.PDF"
+  [headers.values]
+    Content-Type = "application/pdf"
+    Content-Disposition = "inline"
+
 [[redirects]]
   from = "/emergency"
   to = "/emergency.html"
