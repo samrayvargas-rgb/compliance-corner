@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#10151c" />
+  <title>SDS Library · HubStarr</title>
+  <style>
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap");
+
+:root {
+  --bg: #10151c;
+  --bg-2: #171e28;
+  --panel: #1c2430;
+  --line: #2c3644;
+  --ink: #e8edf3;
+  --muted: #9aa6b4;
+  --hs-blue: #204090;
+  --hs-red: #e82020;
+  --amber: #e82020;
+  --green: #3dba7a;
+  --red: #e82020;
+  --blue: #204090;
+}
+* { box-sizing: border-box; }
+html, body {
+  margin: 0; padding: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "IBM Plex Sans", Arial, sans-serif;
+}
+body {
+  min-height: 100dvh;
+  background-image:
+    linear-gradient(180deg, rgba(16,21,28,.15), var(--bg) 260px),
+    repeating-linear-gradient(135deg, rgba(255,255,255,.015) 0 2px, transparent 2px 10px);
+}
+header {
+  background:
+    linear-gradient(90deg, var(--hs-red) 0 6px, var(--hs-blue) 6px 12px, transparent 12px),
+    linear-gradient(180deg, #151c28, #0f141c);
+  color: var(--ink);
+  padding: 18px 18px 18px;
+  border-bottom: 1px solid var(--line);
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 10px;
+  padding: 8px 12px;
+  margin: 0 0 14px;
+}
+.brand img { display: block; height: 40px; width: auto; }
+header.sub .brand img { height: 32px; }
+header a { color: var(--amber); font-size: 13px; font-weight: 600; text-decoration: none; }
+header .kicker {
+  margin: 0 0 6px;
+  font-family: "Barlow Condensed", sans-serif;
+  letter-spacing: .18em;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: var(--amber);
+}
+header h1 {
+  margin: 0;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 800;
+  font-size: 34px;
+  letter-spacing: .02em;
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+header p { margin: 8px 0 0; font-size: 14px; color: var(--muted); }
+.wrap { max-width: 560px; margin: 0 auto; padding: 18px 14px 48px; }
+.grid { display: grid; gap: 10px; }
+.card {
+  display: grid;
+  grid-template-columns: 52px 1fr auto;
+  gap: 12px;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.22);
+}
+.card:active { transform: scale(.99); }
+.card h2 {
+  margin: 0 0 3px;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+}
+.card p { margin: 0; font-size: 13px; color: var(--muted); line-height: 1.35; }
+.card .copy { min-width: 0; }
+.ico {
+  width: 52px; height: 52px; border-radius: 12px;
+  display: grid; place-items: center;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 800; font-size: 18px;
+  color: #111;
+}
+.sds .ico { background: var(--green); }
+.how .ico { background: #7ad0a4; }
+.emg .ico { background: var(--red); color: #fff; }
+.blt .ico { background: var(--blue); color: #081018; }
+.emp .ico { background: var(--amber); }
+.trn .ico { background: #c9842a; }
+.tag {
+  display: inline-block;
+  font-size: 10px; font-weight: 700; letter-spacing: .06em;
+  text-transform: uppercase; padding: 4px 7px; border-radius: 999px;
+  background: #243040; color: var(--muted); white-space: nowrap;
+}
+.tag.public { background: rgba(61,186,122,.15); color: var(--green); }
+.tag.soon { background: rgba(232,163,23,.12); color: var(--amber); }
+button.linklike {
+  width: 100%; text-align: left; border: 0; background: transparent;
+  padding: 0; font: inherit; color: inherit; cursor: pointer;
+}
+.panel {
+  display: none;
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 16px 16px 8px;
+  margin: -2px 0 8px;
+}
+.panel.on { display: block; }
+.panel h3 {
+  margin: 0 0 8px;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 16px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--amber);
+}
+.panel ul { margin: 0 0 12px; padding: 0 0 0 18px; }
+.panel li { margin: 0 0 7px; font-size: 14px; line-height: 1.4; color: #d5dde6; }
+.phone { font-weight: 700; color: #fff; }
+.note { font-size: 12px; color: var(--muted); margin: 14px 2px 0; line-height: 1.45; }
+footer { text-align: center; font-size: 11px; color: #6b7684; padding: 8px 12px 28px; }
+label.sr {
+  display: block; font-size: 12px; font-weight: 700; color: var(--amber);
+  letter-spacing: .08em; text-transform: uppercase; margin: 0 0 8px;
+}
+input[type=search] {
+  width: 100%; font-size: 20px; padding: 16px;
+  border: 1px solid var(--line); border-radius: 14px;
+  background: var(--panel); color: var(--ink);
+  font-family: "IBM Plex Sans", sans-serif;
+}
+input[type=search]:focus { outline: 2px solid var(--amber); border-color: transparent; }
+.hint { font-size: 12px; color: var(--muted); margin: 8px 0 12px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; }
+.chips button {
+  border: 1px solid var(--line); background: var(--panel); color: var(--ink);
+  border-radius: 999px; padding: 7px 12px; font-size: 12px; font-weight: 600;
+}
+.chips button.on { background: var(--amber); color: #16120a; border-color: var(--amber); }
+.count { font-size: 12px; color: var(--muted); margin: 0 0 10px; }
+a.row {
+  display: block; background: var(--panel); border: 1px solid var(--line);
+  border-radius: 14px; padding: 14px 16px; margin: 0 0 8px;
+  text-decoration: none; color: inherit;
+}
+a.row.best { border-color: var(--amber); box-shadow: inset 3px 0 0 var(--amber); }
+a.row strong { display: block; font-size: 17px; line-height: 1.25; }
+a.row em { background: rgba(232,163,23,.28); font-style: normal; border-radius: 3px; padding: 0 2px; }
+a.row span { display: block; font-size: 12px; color: var(--muted); margin-top: 4px; }
+.empty {
+  background: var(--panel); border: 1px dashed var(--line);
+  padding: 16px; border-radius: 14px; line-height: 1.4; color: var(--muted);
+}
+.site-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin: 0 0 16px; }
+.site-row button {
+  border: 1px solid var(--line); background: var(--panel); color: var(--ink);
+  font-weight: 700; font-size: 13px; padding: 10px 6px; border-radius: 10px;
+}
+.site-row button[aria-pressed="true"] { background: var(--amber); color: #16120a; border-color: var(--amber); }
+
+  </style>
+</head>
+<body>
+  <header class="sub">
+    <div class="brand"><img src="logo-header.png" alt="HubStarr Logistics" /></div>
+    <a href="index.html">← Compliance Corner</a>
+    <h1>Safety Data Sheets</h1>
+  </header>
+  <div class="wrap">
+    <label class="sr" for="q">Type a few letters</label>
+    <input type="search" id="q" placeholder="brake, battery, clorox…" autocomplete="off" autocorrect="off" spellcheck="false" />
+    <p class="hint">Matches as you type. Filter by type, then tap the sheet.</p>
+    <div class="chips" id="chips"></div>
+    <p class="count" id="count"></p>
+    <div id="list"></div>
+    <p class="count">Paper backup is the binder on this board. No SDS for a product in use — do not use it.</p>
+  </div>
+  <script>
+    window.HS_SEARCH = {
+      folder: "sds",
+      empty: "SDS files are not on this site yet.",
+      noMatch: "Nothing matches those letters. Try the product (brake, battery, clorox).",
+      aliases: {
+        "clorox": ["bleach"],
+        "wd-40": ["wd40", "wd 40"],
+        "gojo": ["orange soap", "hand soap"],
+        "googone": ["goo gone"],
+        "simple green": ["simplegreen"],
+        "crc brake cleaner": ["brake", "brakes"],
+        "blue def": ["def", "diesel exhaust"],
+        "peak": ["antifreeze", "coolant"],
+        "dex-cool coolant": ["dexcool", "dex cool", "antifreeze"],
+        "rotella": ["oil", "engine oil"],
+        "unleaded gasoline": ["gas", "gasoline"],
+        "panasonic": ["battery", "lithium", "li-ion", "2170"],
+        "samsung": ["battery", "lithium", "li-ion"],
+        "citric": ["acid"],
+        "sika": ["primer"],
+        "zep": ["degreaser", "concrete"],
+        "talak": ["insecticide"],
+        "fungi-phite": ["fungicide"],
+        "crop plus": ["fertilizer"]
+      }
+    };
+    window.HS_CATALOG = [
+  {"group": "Batteries", "name": "Panasonic 2170T lithium cell", "file": "Panasonic_LI_ion/Panasonic_2170T-SDS-IBT-00030-26_E_p.pdf"},
+  {"group": "Batteries", "name": "Samsung lithium battery", "file": "General/Samsung.pdf"},
+  {"group": "Batteries", "name": "Samsung SDI lithium battery", "file": "General/Samsung_SDI.pdf"},
+  {"group": "Batteries", "name": "Powersmith batteries", "file": "General/PowersmithBatteries-MSDS.pdf"},
+
+  {"group": "Shop", "name": "Pink Wash", "file": "Garage/3825_Pink-Wash-_SDS.pdf"},
+  {"group": "Shop", "name": "Gojo Natural Orange", "file": "Garage/GoJo_natural_orange_SDS.pdf"},
+  {"group": "Shop", "name": "Goo Gone", "file": "Garage/GooGone.pdf"},
+  {"group": "Shop", "name": "Ortho Home Defense", "file": "Garage/Orhto_Home_Defense.pdf"},
+  {"group": "Shop", "name": "Armor All leather care", "file": "Garage/SDS_Armor_All_Leather_Care_Spray_US_en_2020_10_27.pdf"},
+  {"group": "Shop", "name": "Simple Green all-purpose", "file": "Garage/SDS_EN-AU_SimpleGreenAllPurposeCleaner.pdf"},
+  {"group": "Shop", "name": "Turtle Wax spray detailer", "file": "Garage/Turtle_wax_Spray_Detailer.pdf"},
+  {"group": "Shop", "name": "Valspar protective sealer", "file": "Garage/Valspar_Protective_sealer.pdf"},
+  {"group": "Shop", "name": "ZEP concrete cleaner", "file": "Garage/ZEP_Concrete_cleaner_ZUCON128_-_MSDS_-_EN_-_US.pdf"},
+  {"group": "Shop", "name": "Chemical Guys C4 compound", "file": "Garage/chemical-guys-sds-c4-clear-cut-correction-compound-16oz-95231761.pdf"},
+  {"group": "Shop", "name": "Chemical Guys metal polish", "file": "Garage/chemical-guys-sds-light-metal-polish-36948391.pdf"},
+  {"group": "Shop", "name": "Chemical Guys new-car air freshener", "file": "Garage/chemical-guys-sds-new-car-smell-air-freshener-83175522.pdf"},
+  {"group": "Shop", "name": "Chemical Guys tire shine", "file": "Garage/chemical-guys-sds-nice-and-wet-tire-shine-protective-coating-11868506.pdf"},
+  {"group": "Shop", "name": "Chemical Guys P4 polish", "file": "Garage/chemical-guys-sds-p4-precision-paint-perfection-polish-16oz-74945636.pdf"},
+
+  {"group": "Cleaners", "name": "Clorox", "file": "General/Clorox-MSDS.pdf"},
+  {"group": "Cleaners", "name": "Fabuloso all-purpose cleaner", "file": "General/Fabuloso_All_Purpose_Cleaner.pdf"},
+  {"group": "Cleaners", "name": "Floor Science neutral cleaner", "file": "General/Floor_Science_Neutral_Floor_Cleaner.pdf"},
+  {"group": "Cleaners", "name": "GOJO hand cleaner", "file": "General/GOJO_404012S_SDS.PDF"},
+  {"group": "Cleaners", "name": "Scrubbing Bubbles", "file": "General/MSDS-SCRUBBING_BUBBLES.pdf"},
+  {"group": "Cleaners", "name": "OxiClean", "file": "General/OXYCLEAN.pdf"},
+  {"group": "Cleaners", "name": "Zep industrial degreaser", "file": "General/Zep_Industrial_Degreaser.pdf"},
+
+  {"group": "Adhesives", "name": "3M high-strength adhesive", "file": "General/3M_Hi_Stregnth_Adhesive_spray.pdf"},
+  {"group": "Adhesives", "name": "Bondo all-purpose putty", "file": "General/Bondo_All_Purpose_Putty.pdf"},
+  {"group": "Adhesives", "name": "Flex Seal", "file": "General/FLEX_SEAL_MSDS.PDF"},
+  {"group": "Adhesives", "name": "Great Stuff gaps and cracks", "file": "General/Great_Stuff_Gaps-Cracks_SDS_4-17-23.pdf"},
+  {"group": "Adhesives", "name": "Loctite PL concrete sealant", "file": "General/Loctite-PL-Concrete-Self-Leveling-Polyurethane-Sealant-SDS-2298852.pdf"},
+  {"group": "Adhesives", "name": "Sika Primer 217", "file": "General/SDS_249-200118-C_Sika_Primer-217_LUM_US_en_4.0_14.07.2023_5293_-_Waymo.pdf"},
+  {"group": "Adhesives", "name": "Form-release / lectric", "file": "General/DG_Form_Lectric.pdf"},
+
+  {"group": "Fuels & fluids", "name": "Unleaded gasoline", "file": "Garage/Unleaded_Gasoline.pdf"},
+  {"group": "Fuels & fluids", "name": "Blue DEF", "file": "General/Blue_DEF.pdf"},
+  {"group": "Fuels & fluids", "name": "CRC brake cleaner", "file": "General/CRC_Brake_Cleaner.pdf"},
+  {"group": "Fuels & fluids", "name": "Dex-Cool coolant", "file": "General/Oreilly_Dex_Cool_Coolant_SDS.pdf"},
+  {"group": "Fuels & fluids", "name": "Peak LL 50/50 coolant", "file": "Garage/Peak_LL_50-50_SDS_2-16-16.pdf"},
+  {"group": "Fuels & fluids", "name": "Peak European antifreeze 50/50", "file": "General/Peak_European_Antifreeze_50-50.pdf"},
+  {"group": "Fuels & fluids", "name": "Shell Rotella T5 15W-40", "file": "General/Shell_Rotella_T5_15w40_Oil.PDF"},
+  {"group": "Fuels & fluids", "name": "WD-40", "file": "General/wd-40_MSDS.pdf"},
+
+  {"group": "Crop inputs", "name": "Fungi-Phite", "file": "Verdisian/SKU_1000439_Fungi-Phite.pdf"},
+  {"group": "Crop inputs", "name": "PolyAmine Calcium", "file": "Verdisian/SKU_1000629_PolyAmineCalciumOrganic.pdf"},
+  {"group": "Crop inputs", "name": "PolyAmine Zinc", "file": "Verdisian/SKU_1000637_PolyAmineZinc.pdf"},
+  {"group": "Crop inputs", "name": "Primacy Alpha", "file": "Verdisian/SKU_1000732_PrimacyAlpha.pdf"},
+  {"group": "Crop inputs", "name": "KnockOut", "file": "Verdisian/SKU_1000769_KnockOut_UnitedStates.pdf"},
+  {"group": "Crop inputs", "name": "OrthoPhos Plus", "file": "Verdisian/SKU_1000770_OrthoPhosPlus_Mexico.pdf"},
+  {"group": "Crop inputs", "name": "Crop Plus", "file": "Verdisian/SKU_1000908_CROP_PLUS_.pdf"},
+  {"group": "Crop inputs", "name": "ReKovery Fruit", "file": "Verdisian/SKU_1001795_ReKoveryFruit_265_gal.pdf"},
+  {"group": "Crop inputs", "name": "Steric P+K", "file": "Verdisian/SKU_1001998_StericP_KDS.pdf"},
+  {"group": "Crop inputs", "name": "PolyAmine Manganese", "file": "Verdisian/SKU_1007345_PolyAmineManganese_265_gal.pdf"},
+  {"group": "Crop inputs", "name": "Oxy-Phos", "file": "Verdisian/SKU_1007447_Oxy-Phos_265_gal.pdf"},
+
+  {"group": "Process", "name": "Dynalene EG", "file": "ASM/Dynalene-EG-SDS-10-22-24.pdf"},
+  {"group": "Process", "name": "Granular citric acid", "file": "General/Granular_Citric_Acid_ADM_SDS.pdf"},
+  {"group": "Process", "name": "Talak 7.9 F", "file": "General/Talak-7.9-F-SDS_20250908.pdf"},
+  {"group": "Process", "name": "Green silicon carbide", "file": "Sumco/Green_Silicon_Carbide_SDS.pdf"},
+  {"group": "Process", "name": "Metal cleaner", "file": "Sumco/Sumco_Metal_Cleaner_SDS.pdf"},
+  {"group": "Process", "name": "Industrial metal process SDS", "file": "General/SUMCO_SDS.pdf"}
+]
+;
+  </script>
+  <script>
+(function () {
+  const cfg = window.HS_SEARCH || {};
+  const folder = cfg.folder || "sds";
+  const emptyMsg = cfg.empty || "Nothing in this library yet.";
+  const noMatch = cfg.noMatch || "Nothing matches those letters.";
+  const aliases = cfg.aliases || {};
+
+  let items = [], group = "All";
+  const list = document.getElementById("list");
+  const q = document.getElementById("q");
+  const chips = document.getElementById("chips");
+  const count = document.getElementById("count");
+
+  function norm(s) {
+    return (s || "").toLowerCase().replace(/[_./+\-]+/g, " ").replace(/\s+/g, " ").trim();
+  }
+  function haystack(it) {
+    if (it._hay) return it._hay;
+    const base = norm(it.name + " " + it.group + " " + it.file);
+    const extra = [];
+    Object.keys(aliases).forEach(function (key) {
+      if (base.indexOf(key) !== -1) extra.push(aliases[key].join(" "));
+    });
+    it._hay = (base + " " + extra.join(" ")).trim();
+    it._words = it._hay.split(" ");
+    return it._hay;
+  }
+  function score(it, raw) {
+    const term = norm(raw);
+    if (!term) return 1;
+    const hay = haystack(it);
+    const words = term.split(" ");
+    let s = 0;
+    for (let i = 0; i < words.length; i++) {
+      const w = words[i];
+      if (!w) continue;
+      if (hay.indexOf(w) === -1) return 0;
+      if (norm(it.name).indexOf(w) === 0) s += 50;
+      else if (it._words.some(function (x) { return x.indexOf(w) === 0; })) s += 20;
+      else s += 8;
+    }
+    if (norm(it.name).indexOf(term) === 0) s += 30;
+    return s;
+  }
+  function highlight(text, raw) {
+    const safe = String(text || "").replace(/[&<>]/g, "");
+    const term = norm(raw);
+    if (!term) return safe;
+    let out = safe;
+    term.split(" ").filter(Boolean).forEach(function (w) {
+      const re = new RegExp("(" + w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + ")", "ig");
+      out = out.replace(re, "<em>$1</em>");
+    });
+    return out;
+  }
+  function render() {
+    if (!items.length) {
+      count.textContent = "";
+      list.innerHTML = "<div class='empty'>" + emptyMsg + "</div>";
+      return;
+    }
+    const term = q.value || "";
+    const ranked = items.map(function (it) {
+      if (group !== "All" && it.group !== group) return null;
+      const sc = score(it, term);
+      return sc ? { it: it, sc: sc } : null;
+    }).filter(Boolean).sort(function (a, b) {
+      return b.sc - a.sc || a.it.name.localeCompare(b.it.name);
+    });
+    const typing = norm(term).length > 0;
+    const shown = typing ? ranked.slice(0, 8) : ranked;
+    count.textContent = typing
+      ? (shown.length ? "Top matches — tap one" : "No match")
+      : shown.length + " files — type to narrow";
+    if (!shown.length) {
+      list.innerHTML = "<div class='empty'>" + noMatch + "</div>";
+      return;
+    }
+    list.innerHTML = shown.map(function (row, i) {
+      const it = row.it;
+      const cls = typing && i === 0 ? "row best" : "row";
+      return "<a class='" + cls + "' target='_blank' rel='noopener' href='https://github.com/samrayvargas-rgb/compliance-corner/raw/main/" + encodeURI((it.file || '').split('/').pop()) + "'>" +
+        "<strong>" + highlight(it.name, term) + "</strong>" +
+        "<span>" + it.group + (typing && i === 0 ? " · best match" : "") + "</span></a>";
+    }).join("");
+  }
+  function load(data) {
+    items = Array.isArray(data) ? data : [];
+    items.forEach(haystack);
+    const names = Array.from(new Set(items.map(function (i) { return i.group; }))).sort();
+    const groups = names.length ? ["All"].concat(names) : [];
+    chips.innerHTML = groups.map(function (g, i) {
+      return "<button type='button' data-g='" + g + "' class='" + (i === 0 ? "on" : "") + "'>" + g + "</button>";
+    }).join("");
+    chips.onclick = function (e) {
+      const btn = e.target.closest("button");
+      if (!btn) return;
+      group = btn.getAttribute("data-g");
+      chips.querySelectorAll("button").forEach(function (b) { b.classList.toggle("on", b === btn); });
+      render();
+    };
+    render();
+  }
+  if (window.HS_CATALOG) {
+    load(window.HS_CATALOG);
+  } else {
+    fetch("/" + folder + "/catalog.json").then(function (r) { return r.json(); }).then(load).catch(function () {
+      items = [];
+      render();
+    });
+  }
+  q.addEventListener("input", render);
+  q.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") {
+      const first = list.querySelector("a.row");
+      if (first) { e.preventDefault(); first.click(); }
+    }
+  });
+  q.focus();
+})();
+
+  </script>
+</body>
+</html>
