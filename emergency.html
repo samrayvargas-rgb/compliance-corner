@@ -201,6 +201,7 @@ a.row span { display: block; font-size: 12px; color: var(--muted); margin-top: 4
     .meet { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; margin: 0 0 10px; }
     .meet h3 { margin: 0 0 8px; font-family: "Barlow Condensed", sans-serif; text-transform: uppercase; letter-spacing: .06em; font-size: 15px; color: var(--hs-red); }
     .meet p { margin: 0 0 6px; font-size: 15px; }
+    .emap { width:100%; border-radius:10px; margin-top:10px; background:#fff; display:block; }
   </style>
 </head>
 <body>
@@ -257,16 +258,16 @@ a.row span { display: block; font-size: 12px; color: var(--muted); margin-top: 4
       <div class="copy"><h2>Assembly points</h2><p>9701 and 9501 — where to go.</p></div>
     </button>
     <div id="maps" class="pane">
-      <div class="meet">
-        <h3>9701 North</h3>
-        <p>Point 1 · Point 2 · Point 3</p>
-        <p>Office → south parking lot</p>
-        <p>Warehouse → north trailer lot</p>
-      </div>
-      <div class="meet">
-        <h3>9501 South</h3>
-        <p>Point A · Point B · Point C · Point E</p>
-      </div>
+      <a class="call" href="maps/9701-evac.pdf">
+        <div class="who">9701 North</div>
+        <div class="num" style="font-size:22px">Open evac map</div>
+        <div class="sub">Points 1 · 2 · 3 · office south lot · warehouse north trailer lot</div>
+      </a>
+      <a class="call" href="maps/9501-evac.pdf">
+        <div class="who">9501 South</div>
+        <div class="num" style="font-size:22px">Open evac map</div>
+        <div class="sub">Points A · B · C · E</div>
+      </a>
       <a class="call" href="tel:4806276200">
         <div class="who">Local fire</div>
         <div class="num">480-627-6200</div>
