@@ -184,7 +184,11 @@ a.row span { display: block; font-size: 12px; color: var(--muted); margin-top: 4
 }
 .site-row button[aria-pressed="true"] { background: var(--amber); color: #16120a; border-color: var(--amber); }
 
-  </style>
+  
+a.row.pin { border-color: var(--hs-red); box-shadow: inset 3px 0 0 var(--hs-red); margin-bottom: 12px; }
+#howto.panel { display:none; }
+#howto.panel.on, #howto:target { display:block; margin: 0 0 14px; }
+</style>
 </head>
 <body>
   <header class="sub">
@@ -196,6 +200,18 @@ a.row span { display: block; font-size: 12px; color: var(--muted); margin-top: 4
     <label class="sr" for="q">Type a few letters</label>
     <input type="search" id="q" placeholder="brake, battery, clorox…" autocomplete="off" autocorrect="off" spellcheck="false" />
     <p class="hint">Matches as you type. Filter by type, then tap the sheet.</p>
+    
+    <div id="howto" class="panel">
+      <h3>Use these first</h3>
+      <ul>
+        <li><strong>Section 2 — Hazard(s).</strong> Pictograms, signal word, what it can do.</li>
+        <li><strong>Section 4 — First aid.</strong> Eyes, skin, inhale, swallow.</li>
+        <li><strong>Section 6 — Spill.</strong> What to do and what not to mix it with.</li>
+        <li><strong>Section 8 — PPE.</strong> Gloves, glasses, respirator.</li>
+      </ul>
+      <p class="note">If the name on the jug does not match Section 1, stop. No SDS on file → do not use it.</p>
+    </div>
+
     <div class="chips" id="chips"></div>
     <p class="count" id="count"></p>
     <div id="list"></div>
@@ -290,7 +306,7 @@ a.row span { display: block; font-size: 12px; color: var(--muted); margin-top: 4
   {"group": "Process", "name": "Granular citric acid", "file": "General/Granular_Citric_Acid_ADM_SDS.pdf"},
   {"group": "Process", "name": "Talak 7.9 F", "file": "General/Talak-7.9-F-SDS_20250908.pdf"},
   {"group": "Process", "name": "Green silicon carbide", "file": "Sumco/Green_Silicon_Carbide_SDS.pdf"},
-  {"group": "Process", "name": "Metal cleaner", "file": "Sumco/Sumco_Metal_Cleaner_SDS.pdf"},
+  {"group": "Process", "name": "Yushirontec WL511", "file": "Yushirontec_WL511.pdf"},
   {"group": "Process", "name": "Industrial metal process SDS", "file": "General/SUMCO_SDS.pdf"}
 ]
 ;
@@ -374,7 +390,8 @@ a.row span { display: block; font-size: 12px; color: var(--muted); margin-top: 4
       list.innerHTML = "<div class='empty'>" + noMatch + "</div>";
       return;
     }
-    list.innerHTML = shown.map(function (row, i) {
+    var howto = "<a class='row pin' href='#howto'><strong>How to read an SDS</strong><span>Use sections 2, 4, 6, and 8 first</span></a>";
+    list.innerHTML = howto + shown.map(function (row, i) {
       const it = row.it;
       const cls = typing && i === 0 ? "row best" : "row";
       var file = String(it.file || "").split("/").pop();
