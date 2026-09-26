@@ -11,15 +11,21 @@
       display:flex; align-items:center; gap:12px;
       padding:10px 12px; background:#151c28; border-bottom:1px solid #2c3644;
     }
-    header a { color:#e82020; font:600 14px/1 Arial,sans-serif; text-decoration:none; }
-    header span { color:#e8edf3; font:600 14px/1.2 Arial,sans-serif; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
-    iframe, embed { width:100%; height:calc(100% - 44px); border:0; background:#fff; }
+    header a { color:#e82020; font:600 14px/1 Arial,sans-serif; text-decoration:none; white-space:nowrap; }
+    header a.dl {
+      margin-left:auto;
+      background:#e82020; color:#fff;
+      padding:7px 10px; border-radius:8px; font-size:12px;
+    }
+    header span { color:#e8edf3; font:600 14px/1.2 Arial,sans-serif; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; min-width:0; }
+    iframe { width:100%; height:calc(100% - 44px); border:0; background:#fff; }
   </style>
 </head>
 <body>
   <header>
     <a href="library.html">← SDS</a>
     <span id="name">Opening sheet…</span>
+    <a class="dl" id="dl" href="#" download>Download</a>
   </header>
   <iframe id="frame" title="SDS"></iframe>
   <script>
@@ -27,9 +33,13 @@
     var file = raw.split("\\").pop().split("/").pop();
     if (!file || !/\.pdf$/i.test(file) || file !== raw) {
       document.getElementById("name").textContent = "Missing sheet";
+      document.getElementById("dl").style.display = "none";
     } else {
+      var url = "/" + encodeURIComponent(file);
       document.getElementById("name").textContent = file.replace(/_/g, " ").replace(/\.pdf$/i, "");
-      document.getElementById("frame").src = "/" + encodeURIComponent(file);
+      document.getElementById("frame").src = url;
+      document.getElementById("dl").href = url;
+      document.getElementById("dl").setAttribute("download", file);
     }
   </script>
 </body>
