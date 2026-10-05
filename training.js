@@ -6,7 +6,7 @@
 window.HS_TRAINING = [
   {
     id: "back-safety",
-    on: false,
+    on: true,
     code: "BST",
     title: "Back safety",
     blurb: "Training. Read it, then sign off.",
