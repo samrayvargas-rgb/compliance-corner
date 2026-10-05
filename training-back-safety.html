@@ -73,33 +73,12 @@
       </ul>
     </div>
 
-    <form name="back-safety" method="POST" data-netlify="true" netlify-honeypot="bot" action="training-thanks.html">
-      <input type="hidden" name="form-name" value="back-safety" />
-      <input type="hidden" name="module" value="Morning Safety Talk — Back Safety" />
-      <p class="hidden"><label>Do not fill<input name="bot" /></label></p>
+    <div class="box" id="signoff">
       <h2 style="margin-top:0">Sign off</h2>
-      <p>Acknowledgement only. This is not a skills test.</p>
-      <label for="name">Printed name</label>
-      <input id="name" name="name" required autocomplete="name" />
-      <label for="site">Location</label>
-      <select id="site" name="location" required>
-        <option value="">Select</option>
-        <option>9701 North</option>
-        <option>9501 South</option>
-        <option>Denver</option>
-        <option>Other</option>
-      </select>
-      <label for="when">Date</label>
-      <input id="when" name="date" type="date" required />
-      <label for="sign">Signoff — type your name</label>
-      <input id="sign" name="signature" required placeholder="Same name as above" />
-      <label class="check">
-        <input type="checkbox" name="ack" value="yes" required />
-        <span>I was present for this talk or I read it. I will size up the load, lift with my legs, and not twist while carrying.</span>
-      </label>
-      <button type="submit">Submit signoff</button>
-      <p class="fine">Goes to Compliance (s.vargas@hubstarrscm.com) through Netlify Forms. Uncontrolled if printed.</p>
-    </form>
+      <p>Acknowledgement only. This is not a skills test. Your name, site, and date are stored in Microsoft Forms — that is the record.</p>
+      <a class="go" id="formlink" href="PASTE_FORMS_LINK_HERE">Open signoff form</a>
+      <p class="fine">Form fields: name, location, date, typed signature, and “I read this and will lift with my legs.” Responses go to s.vargas@hubstarrscm.com.</p>
+    </div>
   </div>
   <script>
     document.getElementById("when").value = new Date().toISOString().slice(0,10);
