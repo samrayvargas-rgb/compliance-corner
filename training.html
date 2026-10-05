@@ -20,8 +20,8 @@
     .ico { width:52px; height:52px; border-radius:12px; display:grid; place-items:center; background:#c9842a; color:#111; font-family:"Barlow Condensed", sans-serif; font-weight:800; }
     h2 { margin:0 0 3px; font-family:"Barlow Condensed", sans-serif; font-size:22px; text-transform:uppercase; }
     p { margin:0; color:var(--muted); font-size:13px; line-height:1.4; }
-    .tag.todo { background:#243040; color:var(--muted); }
-    .tag.done { background:rgba(61,186,122,.15); color:var(--green); }
+    .status { margin-top:6px; font-size:12px; font-weight:700; letter-spacing:.04em; text-transform:uppercase; color:var(--muted); }
+    .status.done { color:var(--green); }
     .note { margin-top:16px; font-size:12px; color:var(--muted); line-height:1.45; }
     .note strong { color:var(--ink); }
   </style>
@@ -38,8 +38,9 @@
       <div>
         <h2>Back safety</h2>
         <p>Morning safety talk. Read it, then sign off.</p>
+        <p class="status" id="back-safety">Status: To do</p>
       </div>
-      <span class="tag" id="back-safety">To do</span>
+      <span class="tag">Open</span>
     </a>
     <p class="note">
       <strong>Add a talk:</strong> copy <code>training-back-safety.html</code>, change the title and the rules, add one card on this page, and make a matching Microsoft Form.<br><br>
@@ -50,13 +51,13 @@
   <script>
     var done = {};
     try { done = JSON.parse(localStorage.getItem("hs-training-done") || "{}"); } catch (e) {}
-    var tag = document.getElementById("back-safety");
+    var status = document.getElementById("back-safety");
     if (done["back-safety"]) {
-      tag.textContent = "Complete";
-      tag.className = "tag done";
+      status.textContent = "Status: Complete";
+      status.className = "status done";
     } else {
-      tag.textContent = "To do";
-      tag.className = "tag todo";
+      status.textContent = "Status: To do";
+      status.className = "status";
     }
   </script>
 </body>
