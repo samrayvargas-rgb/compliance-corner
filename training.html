@@ -20,9 +20,12 @@
     .ico { width:52px; height:52px; border-radius:12px; display:grid; place-items:center; background:#c9842a; color:#111; font-family:"Barlow Condensed", sans-serif; font-weight:800; }
     h2 { margin:0 0 3px; font-family:"Barlow Condensed", sans-serif; font-size:22px; text-transform:uppercase; }
     p { margin:0; color:var(--muted); font-size:13px; line-height:1.4; }
-    .tag { font-size:10px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; padding:4px 7px; border-radius:999px; background:rgba(61,186,122,.15); color:var(--green); }
+    .status { margin-top:6px; font-size:12px; font-weight:700; letter-spacing:.04em; text-transform:uppercase; color:var(--muted); }
+    .status.done { color:var(--green); }
+    .tag { display:inline-block; font-size:10px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; padding:4px 7px; border-radius:999px; background:rgba(61,186,122,.15); color:var(--green); white-space:nowrap; }
     .note { margin-top:16px; font-size:12px; color:var(--muted); line-height:1.45; }
     .note strong { color:var(--ink); }
+    code { font-size:11px; color:#d5dde6; }
   </style>
 </head>
 <body>
@@ -36,15 +39,28 @@
       <div class="ico">BST</div>
       <div>
         <h2>Back safety</h2>
-        <p>Morning safety talk. Read it, then sign off.</p>
+        <p>Training. Read it, then sign off.</p>
+        <p class="status" id="back-safety">Status: To do</p>
       </div>
       <span class="tag">Open</span>
     </a>
     <p class="note">
-      <strong>Add a talk:</strong> copy <code>training-back-safety.html</code>, change the title and the rules, add one card on this page, and make a matching Microsoft Form.<br><br>
-      <strong>Take a talk off:</strong> delete that card. Old responses stay in Microsoft Forms → Responses.<br><br>
-      The talk stays here. Who finished it lives in Microsoft Forms, not on this site.
+      <strong>Add training:</strong> copy <code>training-back-safety.html</code>, change the title and the steps, add one card on this page, and make a matching Microsoft Form.<br><br>
+      <strong>Take training off:</strong> delete that card. Old responses stay in Microsoft Forms → Responses.<br><br>
+      The training stays here. Who finished it lives in Microsoft Forms, not on this site.
     </p>
   </div>
+  <script>
+    var done = {};
+    try { done = JSON.parse(localStorage.getItem("hs-training-done") || "{}"); } catch (e) {}
+    var status = document.getElementById("back-safety");
+    if (done["back-safety"]) {
+      status.textContent = "Status: Complete";
+      status.className = "status done";
+    } else {
+      status.textContent = "Status: To do";
+      status.className = "status";
+    }
+  </script>
 </body>
 </html>
