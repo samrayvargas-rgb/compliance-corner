@@ -18,8 +18,6 @@
     .wrap { max-width:560px; margin:0 auto; padding:18px 14px 48px; }
     .signoff { background:#2a1214; border:2px solid var(--red); border-radius:16px; padding:14px; margin-top:18px; }
     .signoff h2 { margin:0 0 6px; color:#fff; font-family:"Barlow Condensed", sans-serif; text-transform:uppercase; }
-    .status { margin:12px 0 0; font-size:13px; font-weight:700; letter-spacing:.04em; text-transform:uppercase; color:var(--muted); }
-    .status.done { color:#3dba7a; }
     .kicker { color:var(--red); font-family:"Barlow Condensed", sans-serif; letter-spacing:.14em; font-size:13px; text-transform:uppercase; margin:0 0 8px; }
     h2 { font-family:"Barlow Condensed", sans-serif; text-transform:uppercase; font-size:20px; margin:18px 0 8px; }
     p, li { font-size:15px; line-height:1.45; color:#d5dde6; }
@@ -58,7 +56,7 @@
       });
       if (item.pdf) html += "<a class='pdf' target='_blank' rel='noopener'>Open the document</a>";
       if (item.form) {
-        html += "<div class='signoff'><h2>Sign off — required</h2><p>Fill this in before you leave. Name, site, and date are the record.</p><iframe title='Training signoff'></iframe><p class='status' id='status'>Status: To do</p></div>";
+        html += "<div class='signoff'><h2>Sign off — required</h2><p>Fill this in before you leave. Name, site, and date are the record.</p><iframe title='Training signoff'></iframe></div>";
       }
       body.innerHTML = html;
       var p = body.querySelector("p.kicker + p");
@@ -75,26 +73,6 @@
       if (pdf) pdf.href = item.pdf;
       var frame = body.querySelector("iframe");
       if (frame) frame.src = item.form;
-      function showDone() {
-        var el = document.getElementById("status");
-        if (!el) return;
-        el.textContent = "Status: Complete";
-        el.className = "status done";
-      }
-      try {
-        var saved = JSON.parse(localStorage.getItem("hs-training-done") || "{}");
-        if (saved[key]) showDone();
-      } catch (e) {}
-      window.addEventListener("message", function (e) {
-        if (!/forms\.(office\.com|cloud\.microsoft)/.test(e.origin)) return;
-        var raw = typeof e.data === "string" ? e.data : JSON.stringify(e.data || "");
-        if (!/submit/i.test(raw)) return;
-        var done = {};
-        try { done = JSON.parse(localStorage.getItem("hs-training-done") || "{}"); } catch (err) {}
-        done[key] = new Date().toISOString();
-        localStorage.setItem("hs-training-done", JSON.stringify(done));
-        showDone();
-      });
     }
   </script>
 </body>
