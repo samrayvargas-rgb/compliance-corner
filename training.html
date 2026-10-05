@@ -20,7 +20,8 @@
     .ico { width:52px; height:52px; border-radius:12px; display:grid; place-items:center; background:#c9842a; color:#111; font-family:"Barlow Condensed", sans-serif; font-weight:800; }
     h2 { margin:0 0 3px; font-family:"Barlow Condensed", sans-serif; font-size:22px; text-transform:uppercase; }
     p { margin:0; color:var(--muted); font-size:13px; line-height:1.4; }
-    .tag { font-size:10px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; padding:4px 7px; border-radius:999px; background:rgba(61,186,122,.15); color:var(--green); }
+    .tag.todo { background:#243040; color:var(--muted); }
+    .tag.done { background:rgba(61,186,122,.15); color:var(--green); }
     .note { margin-top:16px; font-size:12px; color:var(--muted); line-height:1.45; }
     .note strong { color:var(--ink); }
   </style>
@@ -38,13 +39,25 @@
         <h2>Back safety</h2>
         <p>Morning safety talk. Read it, then sign off.</p>
       </div>
-      <span class="tag">Open</span>
+      <span class="tag" id="back-safety">To do</span>
     </a>
     <p class="note">
       <strong>Add a talk:</strong> copy <code>training-back-safety.html</code>, change the title and the rules, add one card on this page, and make a matching Microsoft Form.<br><br>
       <strong>Take a talk off:</strong> delete that card. Old responses stay in Microsoft Forms → Responses.<br><br>
-      The talk stays here. Who finished it lives in Microsoft Forms, not on this site.
+      The talk stays here. Who finished it lives in Microsoft Forms. Complete on this phone only shows on this phone.
     </p>
   </div>
+  <script>
+    var done = {};
+    try { done = JSON.parse(localStorage.getItem("hs-training-done") || "{}"); } catch (e) {}
+    var tag = document.getElementById("back-safety");
+    if (done["back-safety"]) {
+      tag.textContent = "Complete";
+      tag.className = "tag done";
+    } else {
+      tag.textContent = "To do";
+      tag.className = "tag todo";
+    }
+  </script>
 </body>
 </html>
