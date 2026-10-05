@@ -35,32 +35,36 @@
     <h1>Training</h1>
   </header>
   <div class="wrap">
-    <a class="card" href="training-back-safety.html">
-      <div class="ico">BST</div>
-      <div>
-        <h2>Back safety</h2>
-        <p>Training. Read it, then sign off.</p>
-        <p class="status" id="back-safety">Status: To do</p>
-      </div>
-      <span class="tag">Open</span>
-    </a>
+    <div id="list"></div>
     <p class="note">
-      <strong>Add training:</strong> copy <code>training-back-safety.html</code>, change the title and the steps, add one card on this page, and make a matching Microsoft Form.<br><br>
-      <strong>Take training off:</strong> delete that card. Old responses stay in Microsoft Forms → Responses.<br><br>
-      The training stays here. Who finished it lives in Microsoft Forms, not on this site.
+      <strong>Add or take off training:</strong> edit <code>training.js</code>, then push. Set <code>on: false</code> to hide one. Old responses stay in Microsoft Forms.
     </p>
   </div>
+  <script src="training.js"></script>
   <script>
     var done = {};
     try { done = JSON.parse(localStorage.getItem("hs-training-done") || "{}"); } catch (e) {}
-    var status = document.getElementById("back-safety");
-    if (done["back-safety"]) {
-      status.textContent = "Status: Complete";
-      status.className = "status done";
-    } else {
-      status.textContent = "Status: To do";
-      status.className = "status";
+    var list = document.getElementById("list");
+    var items = (window.HS_TRAINING || []).filter(function (t) { return t.on; });
+    if (!items.length) {
+      list.innerHTML = "<p class='note'>No training on the floor right now.</p>";
     }
+    items.forEach(function (t) {
+      var a = document.createElement("a");
+      a.className = "card";
+      a.href = "training-view.html?id=" + encodeURIComponent(t.id);
+      var status = done[t.id] ? "Status: Complete" : "Status: To do";
+      var statusClass = done[t.id] ? "status done" : "status";
+      a.innerHTML =
+        "<div class='ico'></div>" +
+        "<div><h2></h2><p></p><p class='" + statusClass + "'></p></div>" +
+        "<span class='tag'>Open</span>";
+      a.querySelector(".ico").textContent = t.code || "TRN";
+      a.querySelector("h2").textContent = t.title || "Training";
+      a.querySelector("p").textContent = t.blurb || "Read it, then sign off.";
+      a.querySelector(".status").textContent = status;
+      list.appendChild(a);
+    });
   </script>
 </body>
 </html>
