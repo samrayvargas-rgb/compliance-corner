@@ -194,20 +194,30 @@ a.row span { display: block; font-size: 12px; color: var(--muted); margin-top: 4
     <h1>Safety bulletins</h1>
   </header>
   <div class="wrap">
-    <label class="sr" for="q">Type a few letters</label>
-    <input type="search" id="q" placeholder="alert, recall, temporary…" autocomplete="off" />
-    <p class="hint">Active notices only. Expired bulletins come out of this folder.</p>
-    <div class="chips" id="chips"></div>
-    <p class="count" id="count"></p>
+    <p class="hint">Active notices only. Take one down by removing it from the list.</p>
     <div id="list"></div>
   </div>
   <script>
-    window.HS_SEARCH = {
-      folder: "bulletins",
-      empty: "No active bulletins posted.",
-      noMatch: "No bulletin matches those letters."
-    };
+    var list = document.getElementById("list");
+    function show(items) {
+      if (!items.length) {
+        list.innerHTML = "<div class='empty'>No active bulletins posted.</div>";
+        return;
+      }
+      list.innerHTML = items.map(function (it) {
+        var file = (it.file || "").split("/").pop();
+        return "<a class='row' href='/" + encodeURI(file) + "'><strong>" +
+          (it.name || file) + "</strong><span>" + (it.group || "General") + "</span></a>";
+      }).join("");
+    }
+    fetch("/bulletins/catalog.json").then(function (r) {
+      if (!r.ok) throw new Error("no catalog");
+      return r.json();
+    }).then(function (data) {
+      show(Array.isArray(data) ? data : []);
+    }).catch(function () {
+      show([]);
+    });
   </script>
-  <script src="search.js"></script>
 </body>
 </html>
