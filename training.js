@@ -128,6 +128,7 @@ window.HS_TRAINING = [
         title: "Operators",
         items: [
           "Daily check before you drive: tires, fluids, leaks, forks straight and not cracked, brakes, lights, horn, steering.",
+          "If the truck has a seatbelt, wear it. Every time. Do not start until it is on.",
           "Look for obstructions, uneven floors, and overhead hazards.",
           "Load balanced and fully on both forks. Drive with the load as low as you can.",
           "If the load blocks your view, travel in reverse. Look the way you are going.",
