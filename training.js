@@ -1,12 +1,12 @@
 /* HubStarr training list.
-   Add a training: copy the block below, change the fields, set on: true.
-   Take it off the floor: set on: false. Do not delete the Microsoft Form.
-   Push this file. The list and the page update themselves.
+   on: true  = on the floor
+   on: false = hidden. Leave the block here so you can turn it back on.
+   Push this file after you change it.
 */
 window.HS_TRAINING = [
   {
     id: "back-safety",
-    on: true,
+    on: false,
     code: "BST",
     title: "Back safety",
     blurb: "Training. Read it, then sign off.",
@@ -95,5 +95,57 @@ window.HS_TRAINING = [
     ],
     pdf: "",
     form: "https://forms.office.com/Pages/ResponsePage.aspx?id=FGodbWz940CbypuISeMujdWm4OFLalVDp494lfOXUHZUMTRZN01WV0JER1kwUVREWEgxMVZKTkNCTC4u&embed=true"
+  },
+  {
+    id: "forklift-pedestrians",
+    on: true,
+    code: "FLT",
+    title: "Forklift and pedestrians",
+    blurb: "Working safely around forklifts. Read it, then sign off.",
+    lead: "Forklifts are common enough that people stop seeing them. More than 1 in 10 will be in an accident this year. Operators have to be trained. Everyone on foot has to stay alert.",
+    sections: [
+      {
+        title: "On foot",
+        items: [
+          "Stay in the marked pedestrian walkway. Pay attention in forklift areas.",
+          "Keep a safe distance. Yield to the forklift unless the operator has clearly yielded to you.",
+          "Make eye contact with the driver. Do not assume they saw you.",
+          "Stop at doorways and corners. Listen for the horn. Look for lights. Use the mirrors.",
+          "Never walk under raised forks. Stay out of the fall zone, the circle around the truck where a shifting load can land.",
+          "Do not walk up to talk until the forks are down and the truck is off.",
+          "On a scooter: use the horn and slow down in high traffic, at blind corners, and at intersections.",
+          "Report unsafe operation to a supervisor."
+        ]
+      },
+      {
+        title: "Why the rear swings",
+        items: [
+          "Forklifts steer from the rear wheels. The back end swings in a wider arc than the front.",
+          "In a noisy building you may not hear the horn or the backup alarm. Watch the truck, not just the sound."
+        ]
+      },
+      {
+        title: "Operators",
+        items: [
+          "Daily check before you drive: tires, fluids, leaks, forks straight and not cracked, brakes, lights, horn, steering.",
+          "Look for obstructions, uneven floors, and overhead hazards.",
+          "Load balanced and fully on both forks. Drive with the load as low as you can.",
+          "If the load blocks your view, travel in reverse. Look the way you are going.",
+          "Horn at intersections and anywhere people are on foot. Follow the posted speed.",
+          "OSHA 1910.178: formal and practical training, certified before you drive, evaluated at least every 3 years."
+        ]
+      },
+      {
+        title: "What kills people",
+        items: [
+          "Tip-overs are the leading forklift death. About 22 percent.",
+          "People on foot struck by a truck are about 20 percent.",
+          "Crushed by the truck is about 16 percent. Falls from the truck are about 9 percent.",
+          "Do not stand on the forks. Do not ride unless you are the trained operator."
+        ]
+      }
+    ],
+    pdf: "",
+    form: "https://forms.office.com/Pages/ResponsePage.aspx?id=FGodbWz940CbypuISeMujdWm4OFLalVDp494lfOXUHZUOVlSTjlEUkgxTFdUTjhYR1gxV1dRRDk0Sy4u&embed=true"
   }
 ];
