@@ -3,5 +3,20 @@
     "group": "General",
     "name": "Dock and trailer",
     "file": "dock-trailer.html"
+  },
+  {
+    "group": "General",
+    "name": "Seatbelt",
+    "file": "seatbelt.html"
+  },
+  {
+    "group": "General",
+    "name": "Pedestrians and forklifts",
+    "file": "pedestrians.html"
+  },
+  {
+    "group": "General",
+    "name": "Floors and aisles",
+    "file": "floors.html"
   }
 ]
