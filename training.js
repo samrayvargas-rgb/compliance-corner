@@ -46,7 +46,7 @@ window.HS_TRAINING = [
   },
   {
     id: "haccp",
-    on: true,
+    on: False,
     code: "HAC",
     title: "HACCP",
     blurb: "Food-grade receiving, storage, and distribution. Read it, then sign off.",
