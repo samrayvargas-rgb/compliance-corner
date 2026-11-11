@@ -98,7 +98,7 @@ window.HS_TRAINING = [
   },
   {
     id: "forklift-pedestrians",
-    on: true,
+    on: false,
     code: "FLT",
     title: "Forklift and pedestrians",
     blurb: "Working safely around forklifts. Read it, then sign off.",
@@ -148,5 +148,52 @@ window.HS_TRAINING = [
     ],
     pdf: "",
     form: "https://forms.office.com/Pages/ResponsePage.aspx?id=FGodbWz940CbypuISeMujdWm4OFLalVDp494lfOXUHZUOVlSTjlEUkgxTFdUTjhYR1gxV1dRRDk0Sy4u&embed=true"
+  },
+  {
+    id: "sanitation",
+    on: true,
+    code: "SAN",
+    title: "Warehouse sanitation",
+    blurb: "Keep the building clean so product stays clean. Read it, then sign off.",
+    lead: "This is the floor version of AZ-104. It covers the warehouse where client finished goods or raw materials are stored or held. Bathrooms, the break room, and offices are on the rotating schedule.",
+    sections: [
+      {
+        title: "Who this is for",
+        items: [
+          "Warehouse, sanitation, and maintenance. Required reading.",
+          "Management owns the program. A qualified person is assigned to run it.",
+          "Supervisors make sure the people on the schedule are trained."
+        ]
+      },
+      {
+        title: "The schedule",
+        items: [
+          "A Master Sanitation Schedule is on hand for the inside and the outside.",
+          "Every task on that schedule has a work instruction: who does it, how often, which chemical, and water temperature if it matters.",
+          "The checklist is signed when the task is done. No signature, it is not done."
+        ]
+      },
+      {
+        title: "What clean means here",
+        items: [
+          "Floors and the 18-inch strip along the walls stay clear. No debris buildup.",
+          "Trash and waste go out before they pile up. Dumpster lids stay closed. Nothing collecting on the ground around them.",
+          "Fans, vents, and grids stay free of dirt and grease.",
+          "No mold, mildew, or dirt on floors, ceilings, or equipment.",
+          "Equipment that touches packaging, shipping components, finished goods, or raw materials gets cleaned.",
+          "Spills and damaged product come out. The area stays orderly."
+        ]
+      },
+      {
+        title: "Protect the product",
+        items: [
+          "While you clean, cover or move client product, packaging, and raw materials so cleaner and dirt do not land on them.",
+          "Use the chemical the work instruction names. Do not substitute.",
+          "If you see mold, a spill that is spreading, or a task with no one assigned, tell a lead the same shift."
+        ]
+      }
+    ],
+    pdf: "",
+    form: ""
   }
 ];
