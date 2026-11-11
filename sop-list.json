@@ -1,0 +1,142 @@
+[
+  {
+    "group": "SOP",
+    "name": "AZ-190 Lithium battery handling",
+    "file": "AZ_190_Li-Ion_Battery_Cell_Handling_Storage.pdf"
+  },
+  {
+    "group": "SOP",
+    "name": "AZ-100 Materials quarantine",
+    "file": "AZ-100_Materials-Quarantine-Procedure.pdf"
+  },
+  {
+    "group": "SOP",
+    "name": "AZ-101 Environmental controls",
+    "file": "AZ-101_AZ-Environmental-Controls.pdf"
+  },
+  {
+    "group": "SOP",
+    "name": "AZ-102 Environmental alert",
+    "file": "AZ-102_Environmental-Control-Alert-System-Process.pdf"
+  },
+  {
+    "group": "SOP",
+    "name": "AZ-103 Pest control",
+    "file": "AZ-103_Rodent-and-Pest-Control.pdf"
+  },
+  {
+    "group": "SOP",
+    "name": "AZ-104 Warehouse sanitation",
+    "file": "AZ-104_Warehouse-Sanitation-Procedure.pdf"
+  },
+  {
+    "group": "SOP",
+    "name": "AZ-105 Hygiene and cleanliness",
+    "file": "AZ-105_Personal-Responsibility-for-Hygiene-and-Cleanliness_v1.pdf"
+  },
+  {
+    "group": "SOP",
+    "name": "AZ-106 Warehouse quality",
+    "file": "AZ-106_Warehouse-Quality-Procedure.pdf"
+  },
+  {
+    "group": "SOP",
+    "name": "AZ-109 Handling and storage",
+    "file": "AZ-109_Handling-and-Storage-of-Client-Materials.pdf"
+  },
+  {
+    "group": "SOP",
+    "name": "AZ-110 Good documentation",
+    "file": "AZ-110_Good-Documentation.pdf"
+  },
+  {
+    "group": "SOP",
+    "name": "AZ-111 Cycle count",
+    "file": "AZ-111_Cycle-Count-Procedure.pdf"
+  },
+  {
+    "group": "SOP",
+    "name": "AZ-113 Product recall",
+    "file": "AZ-113_ORG-Client-Product-Recall.pdf"
+  },
+  {
+    "group": "SOP",
+    "name": "AZ-121 Training",
+    "file": "AZ-121_Training-Procedure.pdf"
+  },
+  {
+    "group": "SOP",
+    "name": "AZ-122 Receiving client material",
+    "file": "AZ-122_Recieving-Client-Material.pdf"
+  },
+  {
+    "group": "SOP",
+    "name": "AZ-123 Internal audit",
+    "file": "AZ-123_Internal-Audit-SOP.pdf"
+  },
+  {
+    "group": "SOP",
+    "name": "AZ-124 Regulatory inspections",
+    "file": "AZ-124_Handling-Regulatory-Inspections.pdf"
+  },
+  {
+    "group": "SOP",
+    "name": "AZ-126 Driver",
+    "file": "AZ-126_Driver-SOP.pdf"
+  },
+  {
+    "group": "SOP",
+    "name": "AZ-127 Risk review",
+    "file": "AZ-127_Risk-Review-SOP.pdf"
+  },
+  {
+    "group": "SOP",
+    "name": "AZ-130 Document control",
+    "file": "AZ-130_Document-Control-SOP.pdf"
+  },
+  {
+    "group": "SOP",
+    "name": "AZ-135 PPE",
+    "file": "AZ-135_PPE-SOP.pdf"
+  },
+  {
+    "group": "SOP",
+    "name": "AZ-141 Product release",
+    "file": "AZ-141_Product-Release-for-Shipment.pdf"
+  },
+  {
+    "group": "SOP",
+    "name": "AZ-150 Health, safety, and environment",
+    "file": "AZ-150_HSandE-SOP.pdf"
+  },
+  {
+    "group": "SOP",
+    "name": "AZ-203 Supplier approval",
+    "file": "AZ-203_Supplier-and-Service-Provider-Approval.pdf"
+  },
+  {
+    "group": "SOP",
+    "name": "AZ-205 Customer complaint",
+    "file": "AZ-205_Customer-Complaint-Procedure.pdf"
+  },
+  {
+    "group": "SOP",
+    "name": "AZ-206 Corrective action",
+    "file": "AZ-206_Corrective-Action-Procedure.pdf"
+  },
+  {
+    "group": "Work instruction",
+    "name": "FastField inbound and outbound",
+    "file": "FastField Process.pdf"
+  },
+  {
+    "group": "Work instruction",
+    "name": "WI-036 Cardboard compactor",
+    "file": "WI-Compactor.pdf"
+  },
+  {
+    "group": "Work instruction",
+    "name": "WI-037 Safe use of a bander",
+    "file": "WI-037_Safe_Use_of_a_Bander.pdf"
+  }
+]
