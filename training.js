@@ -194,6 +194,6 @@ window.HS_TRAINING = [
       }
     ],
     pdf: "",
-    form: ""
+    form: "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=FGodbWz940CbypuISeMujdWm4OFLalVDp494lfOXUHZUNVhDVzhXNVgxWjBHRjRLU0tBNDQ1TE0xUy4u"
   }
 ];
