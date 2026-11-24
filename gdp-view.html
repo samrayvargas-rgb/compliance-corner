@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#10151c" />
+  <title>GDP · HubStarr</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap");
+    :root { --bg:#10151c; --panel:#1c2430; --line:#2c3644; --ink:#e8edf3; --muted:#9aa6b4; --red:#e82020; }
+    * { box-sizing: border-box; }
+    body { margin:0; background:var(--bg); color:var(--ink); font-family:"IBM Plex Sans", Arial, sans-serif; }
+    header { background: linear-gradient(90deg, var(--red) 0 6px, var(--blue) 6px 12px, transparent 12px), linear-gradient(180deg,#151c28,#0f141c); padding:18px; border-bottom:1px solid var(--line); }
+    .brand { display:inline-flex; background:#fff; border-radius:10px; padding:8px 12px; margin:0 0 14px; }
+    .brand img { height:32px; display:block; }
+    header a { color:var(--red); font-size:13px; font-weight:600; text-decoration:none; }
+    h1 { margin:8px 0 0; font-family:"Barlow Condensed", sans-serif; font-weight:800; font-size:28px; text-transform:uppercase; }
+    .wrap { max-width:560px; margin:0 auto; padding:18px 14px 48px; }
+    .signoff { background:#2a1214; border:2px solid var(--red); border-radius:16px; padding:14px; margin-top:18px; }
+    .signoff h2 { margin:0 0 6px; color:#fff; font-family:"Barlow Condensed", sans-serif; text-transform:uppercase; }
+    .kicker { color:var(--red); font-family:"Barlow Condensed", sans-serif; letter-spacing:.14em; font-size:13px; text-transform:uppercase; margin:0 0 8px; }
+    h2 { font-family:"Barlow Condensed", sans-serif; text-transform:uppercase; font-size:20px; margin:18px 0 8px; }
+    p, li { font-size:15px; line-height:1.45; color:#d5dde6; }
+    ul { margin:0; padding-left:18px; }
+    li { margin:0 0 8px; }
+    .box { background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:14px; margin:0 0 10px; }
+    iframe { width:100%; height:640px; border:0; border-radius:12px; background:#fff; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand"><img src="logo-header.png" alt="HubStarr Logistics" /></div>
+    <div><a href="gdp.html">← GDP</a></div>
+    <h1 id="title">GDP</h1>
+  </header>
+  <div class="wrap" id="body"></div>
+  <script src="gdp.js"></script>
+  <script>
+    if (sessionStorage.getItem("hs-gdp") !== "1") {
+      location.replace("gdp.html");
+    } else {
+      var key = new URLSearchParams(location.search).get("id") || "";
+      var item = (window.HS_GDP || []).filter(function (t) { return t.id === key; })[0];
+      var body = document.getElementById("body");
+      if (!item) {
+        document.getElementById("title").textContent = "Not found";
+        body.innerHTML = "<p>That module is not on the list.</p>";
+      } else {
+        document.title = item.title + " · HubStarr";
+        document.getElementById("title").textContent = item.title;
+        var html = "<p class='kicker'>GDP-TRN-" + item.code + "</p><p></p>";
+        (item.sections || []).forEach(function (sec) {
+          html += "<h2></h2><div class='box'><ul>";
+          (sec.items || []).forEach(function () { html += "<li></li>"; });
+          html += "</ul></div>";
+        });
+        html += "<div class='signoff'><h2>Sign off — required</h2><p>Fill this in before you leave. Name, site, and date are the record.</p><iframe title='GDP signoff'></iframe></div>";
+        body.innerHTML = html;
+        body.querySelector("p.kicker + p").textContent = item.lead || "";
+        var heads = body.querySelectorAll("h2");
+        var lists = body.querySelectorAll("ul");
+        (item.sections || []).forEach(function (sec, i) {
+          if (heads[i]) heads[i].textContent = sec.title || "";
+          (sec.items || []).forEach(function (line, j) {
+            if (lists[i] && lists[i].children[j]) lists[i].children[j].textContent = line;
+          });
+        });
+        body.querySelector("iframe").src = item.form;
+      }
+    }
+  </script>
+</body>
+</html>

@@ -98,7 +98,7 @@ window.HS_TRAINING = [
   },
   {
     id: "forklift-pedestrians",
-    on: false,
+    on: true,
     code: "FLT",
     title: "Forklift and pedestrians",
     blurb: "Working safely around forklifts. Read it, then sign off.",
@@ -151,7 +151,7 @@ window.HS_TRAINING = [
   },
   {
     id: "sanitation",
-    on: true,
+    on: false,
     code: "SAN",
     title: "Warehouse sanitation",
     blurb: "Keep the building clean so product stays clean. Read it, then sign off.",
@@ -194,6 +194,42 @@ window.HS_TRAINING = [
       }
     ],
     pdf: "",
-    form: "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=FGodbWz940CbypuISeMujdWm4OFLalVDp494lfOXUHZUNVhDVzhXNVgxWjBHRjRLU0tBNDQ1TE0xUy4u"
+    form: "https://forms.office.com/Pages/ResponsePage.aspx?id=FGodbWz940CbypuISeMujdWm4OFLalVDp494lfOXUHZUNVhDVzhXNVgxWjBHRjRLU0tBNDQ1TE0xUy4u&embed=true"
+  },
+  {
+    id: "hygiene",
+    on: true,
+    code: "HYG",
+    title: "Hygiene and personal cleanliness",
+    blurb: "Keep yourself from contaminating client product. Read it, then sign off.",
+    lead: "This is the floor version of AZ-105. It applies to anyone who handles client finished goods or raw materials, including customer employees working on site.",
+    sections: [
+      {
+        title: "Food, drink, and tobacco",
+        items: [
+          "Eat and drink only in the designated areas. No food outside those areas.",
+          "Water is allowed in the warehouse. Use a company leak-proof bottle.",
+          "No tobacco and no vapes anywhere in the facility."
+        ]
+      },
+      {
+        title: "Hands",
+        items: [
+          "Wash or sanitize before you start work.",
+          "Wash or sanitize after you eat, use the restroom, or get your hands dirty.",
+          "If you are opening raw-material containers, wash and sanitize again before you open them."
+        ]
+      },
+      {
+        title: "Open raw materials",
+        items: [
+          "Uniform, hairnet, beard net if needed, booties, and gloves. That is the outfit for open raw materials.",
+          "The point is to keep you from becoming the contamination.",
+          "If the gear is missing or damaged, stop and get it. Do not open the container."
+        ]
+      }
+    ],
+    pdf: "",
+    form: "https://forms.office.com/Pages/ResponsePage.aspx?id=FGodbWz940CbypuISeMujdWm4OFLalVDp494lfOXUHZURVQzN0NFR0dIQzI0MzZPRTJYUk1JM1dROC4u&embed=true"
   }
 ];

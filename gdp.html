@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#10151c" />
+  <title>GDP · HubStarr</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap");
+    :root { --bg:#10151c; --panel:#1c2430; --line:#2c3644; --ink:#e8edf3; --muted:#9aa6b4; --red:#e82020; --blue:#204090; --green:#3dba7a; }
+    * { box-sizing: border-box; }
+    body { margin:0; background:var(--bg); color:var(--ink); font-family:"IBM Plex Sans", Arial, sans-serif; }
+    header { background: linear-gradient(90deg, var(--red) 0 6px, var(--blue) 6px 12px, transparent 12px), linear-gradient(180deg,#151c28,#0f141c); padding:18px; border-bottom:1px solid var(--line); }
+    .brand { display:inline-flex; background:#fff; border-radius:10px; padding:8px 12px; margin:0 0 14px; }
+    .brand img { height:32px; display:block; }
+    header a { color:var(--red); font-size:13px; font-weight:600; text-decoration:none; }
+    h1 { margin:8px 0 0; font-family:"Barlow Condensed", sans-serif; font-weight:800; font-size:34px; text-transform:uppercase; }
+    .wrap { max-width:560px; margin:0 auto; padding:18px 14px 48px; }
+    .gate { background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:18px; }
+    .gate p { color:var(--muted); font-size:14px; line-height:1.45; }
+    label { display:block; font-size:12px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin:0 0 8px; }
+    input[type=password] {
+      width:100%; font-size:22px; letter-spacing:.2em; padding:14px;
+      border:1px solid var(--line); border-radius:12px; background:#10151c; color:var(--ink);
+    }
+    button.go {
+      margin-top:12px; width:100%; background:var(--red); color:#fff; border:0;
+      border-radius:12px; padding:14px; font-weight:800; letter-spacing:.04em; text-transform:uppercase;
+    }
+    .bad { color:var(--red); font-size:13px; min-height:18px; margin:8px 0 0; }
+    .card { display:grid; grid-template-columns:52px 1fr auto; gap:12px; align-items:center; text-decoration:none; color:inherit; background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:14px; margin:0 0 10px; }
+    .ico { width:52px; height:52px; border-radius:12px; display:grid; place-items:center; background:#6d5efc; color:#fff; font-family:"Barlow Condensed", sans-serif; font-weight:800; }
+    h2 { margin:0 0 3px; font-family:"Barlow Condensed", sans-serif; font-size:20px; text-transform:uppercase; }
+    .card p { margin:0; color:var(--muted); font-size:13px; line-height:1.4; }
+    .tag { font-size:10px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; padding:4px 7px; border-radius:999px; background:rgba(61,186,122,.15); color:var(--green); }
+    .note { margin-top:16px; font-size:12px; color:var(--muted); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand"><img src="logo-header.png" alt="HubStarr Logistics" /></div>
+    <div><a href="index.html">← Compliance Corner</a></div>
+    <h1>GDP</h1>
+  </header>
+  <div class="wrap" id="app"></div>
+  <script src="gdp.js"></script>
+  <script>
+    var PIN = "2323";
+    var app = document.getElementById("app");
+    function openList() {
+      var items = window.HS_GDP || [];
+      app.innerHTML = "<div id='list'></div><p class='note'>GDP training only. Sign off on each module you complete.</p>";
+      var list = document.getElementById("list");
+      items.forEach(function (t) {
+        var a = document.createElement("a");
+        a.className = "card";
+        a.href = "gdp-view.html?id=" + encodeURIComponent(t.id);
+        a.innerHTML = "<div class='ico'></div><div><h2></h2><p></p></div><span class='tag'>Open</span>";
+        a.querySelector(".ico").textContent = t.code;
+        a.querySelector("h2").textContent = t.title;
+        a.querySelector("p").textContent = t.blurb;
+        list.appendChild(a);
+      });
+    }
+    function gate() {
+      app.innerHTML =
+        "<div class='gate'>" +
+        "<p>GDP training. Enter the PIN to continue.</p>" +
+        "<label for='pin'>PIN</label>" +
+        "<input id='pin' type='password' inputmode='numeric' autocomplete='off' />" +
+        "<p class='bad' id='bad'></p>" +
+        "<button class='go' type='button' id='go'>Open</button>" +
+        "</div>";
+      var pin = document.getElementById("pin");
+      var bad = document.getElementById("bad");
+      function tryPin() {
+        if ((pin.value || "").trim() === PIN) {
+          sessionStorage.setItem("hs-gdp", "1");
+          openList();
+        } else {
+          bad.textContent = "Wrong PIN.";
+          pin.value = "";
+          pin.focus();
+        }
+      }
+      document.getElementById("go").onclick = tryPin;
+      pin.addEventListener("keydown", function (e) { if (e.key === "Enter") tryPin(); });
+      pin.focus();
+    }
+    if (sessionStorage.getItem("hs-gdp") === "1") openList();
+    else gate();
+  </script>
+</body>
+</html>
