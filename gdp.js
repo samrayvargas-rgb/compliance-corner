@@ -1,29 +1,46 @@
-/* HubStarr GDP training. PIN is on gdp.html. These only show after the gate. */
+/* HubStarr GDP training. Content from GDP-TRN-001 through 010. PIN is on gdp.html. */
 window.HS_GDP = [
   {
     id: "gdp-001",
     code: "001",
-    title: "Introduction to GDP and the quality system",
-    blurb: "What GDP is and why your actions matter.",
-    lead: "Good Distribution Practice keeps medicinal product safe from the time it arrives until it leaves. A product can be made right and still be ruined here by damage, a mix-up, contamination, or diversion.",
+    title: "Introduction to Good Distribution Practice and the quality system",
+    blurb: "What GDP is, the quality system, and what you do with it.",
+    lead: "Applies to all personnel involved in distribution activities. Version 1, effective November 23, 2026.",
     sections: [
       {
-        title: "The quality system",
+        title: "Learning objectives",
         items: [
-          "Work follows approved procedures. Do not invent a shortcut.",
-          "Roles are defined, including a Responsible Person.",
-          "Records are written when the work happens, not later.",
-          "Problems are reported, investigated, and corrected. Management reviews the system."
+          "Explain the purpose of GDP and how it protects product quality and patient safety.",
+          "Describe the key elements of the quality system.",
+          "Identify how individual actions support overall compliance."
         ]
       },
       {
-        title: "On the floor",
+        title: "What is Good Distribution Practice?",
+        body: "Good Distribution Practice (GDP) is the set of standards and controls that ensure medicinal products remain of the required quality, safety, and integrity from the time they arrive at our facility until they are delivered to the next customer. GDP applies to storage, handling, picking, packing, and transportation activities. Even if a product was manufactured correctly, poor handling during distribution can damage it, cause mix-ups, allow contamination, or permit diversion. Following GDP reduces these risks and meets regulatory expectations for the pharmaceutical supply chain."
+      },
+      {
+        title: "The quality system",
+        body: "The quality system is the structured approach we use to plan, perform, document, review, and improve distribution activities so that product quality is consistently maintained. Senior management is accountable for providing resources and ensuring the quality system is effective. Every employee is responsible for following procedures and reporting issues promptly.",
         items: [
-          "Check product and paperwork on receipt.",
-          "Store it in the right status and the right location.",
-          "Pick the right lot and the right quantity.",
-          "Protect temperature-sensitive product.",
-          "If it looks wrong, stop and report it. Do not keep going."
+          "Approved procedures that define how work is performed.",
+          "Defined roles and responsibilities, including a designated Responsible Person.",
+          "Accurate, contemporaneous records.",
+          "Regular self-inspections, deviation management, and corrective actions.",
+          "Management review and continuous improvement."
+        ]
+      },
+      {
+        title: "Practical application",
+        body: "GDP is applied through everyday actions: verifying product and documentation on receipt, storing items in the correct status and location, picking the right lot and quantity, protecting temperature-sensitive product, and reporting anything that looks wrong. Shortcuts or unreported problems can compromise quality and create compliance gaps that are visible during audits. When in doubt, stop and ask. Document what you do. Report deviations immediately. These habits demonstrate that the quality system is working."
+      },
+      {
+        title: "Your responsibilities",
+        items: [
+          "Follow approved procedures at all times.",
+          "Report deviations, damage, or unusual situations without delay.",
+          "Protect product integrity in every task.",
+          "Participate in required training and support continuous improvement."
         ]
       }
     ],
@@ -32,24 +49,37 @@ window.HS_GDP = [
   {
     id: "gdp-002",
     code: "002",
-    title: "Personnel, hygiene, and training",
-    blurb: "Who does what, and how you stay fit to handle product.",
-    lead: "GDP expects trained people, clear roles, and hygiene that protects the product. If you are not trained for a task, you do not do it.",
+    title: "Personnel responsibilities, hygiene, and training",
+    blurb: "Training, competence, and hygiene that protect the product.",
+    lead: "Applies to all warehouse, operations, and support personnel. Version 1, effective November 23, 2026.",
     sections: [
       {
-        title: "Roles",
+        title: "Learning objectives",
         items: [
-          "Only do work you are trained and authorized for.",
-          "The Responsible Person owns GDP compliance. You own the task in front of you.",
-          "Report illness, an open wound, or anything that could contaminate product before you handle it."
+          "Understand GDP requirements for personnel training and competence.",
+          "Apply hygiene practices that protect product quality.",
+          "Recognize the importance of documented training records."
         ]
       },
       {
-        title: "Hygiene and training",
+        title: "Why personnel controls matter",
+        body: "People perform the activities that directly affect product quality. GDP requires that personnel are trained, competent, and follow appropriate hygiene standards so that products are not contaminated, mixed up, or mishandled."
+      },
+      {
+        title: "Training requirements",
+        body: "Initial GDP training must be completed before personnel perform distribution tasks independently. Ongoing training, including annual refreshers or training on changed procedures, is required. Temporary staff and contractors receive the same relevant training as permanent employees. Training is documented, and records are retained as evidence of competence. Effectiveness of training is assessed periodically through observation of work, self-inspections, and quality system reviews."
+      },
+      {
+        title: "Hygiene practices",
+        body: "Personal hygiene helps prevent contamination. Requirements include wearing clean, appropriate clothing, following hand hygiene rules, reporting illness or open wounds that could affect products, and not eating, drinking, or smoking in storage or handling areas. These rules apply even when products are in sealed packaging."
+      },
+      {
+        title: "Your responsibilities",
         items: [
-          "Clean hands, clean clothes, no food or drink around product.",
-          "Complete required training before you start, and refresher training when it is due.",
-          "If a procedure changed, get the update before you use the old way."
+          "Complete all required training before working independently.",
+          "Follow hygiene rules consistently.",
+          "Report any health condition that could impact product quality.",
+          "Ask questions if requirements are unclear."
         ]
       }
     ],
@@ -59,23 +89,40 @@ window.HS_GDP = [
     id: "gdp-003",
     code: "003",
     title: "Premises, equipment, and environmental controls",
-    blurb: "The building and the gear have to protect the product.",
-    lead: "GDP product needs a clean, controlled space and equipment that is fit for use. If the space or the gear is wrong, stop.",
+    blurb: "The building, the gear, and the conditions that protect product.",
+    lead: "Applies to warehouse staff, facilities, and operations personnel. Version 1, effective November 23, 2026.",
     sections: [
       {
-        title: "The space",
+        title: "Learning objectives",
         items: [
-          "Keep storage areas clean, dry, and free of pests.",
-          "Quarantine, reject, and released product stay separated. Do not mix statuses.",
-          "Temperature and humidity stay in range. If a monitor alarms, tell a lead. Do not silence it and walk away."
+          "Explain the purpose of facility and environmental controls under GDP.",
+          "Know how to respond to temperature or equipment issues.",
+          "Apply practices that maintain cleanliness, security, and proper storage conditions."
         ]
       },
       {
-        title: "Equipment",
+        title: "Purpose",
+        body: "Facilities, equipment, and environmental conditions must protect products from damage, contamination, mix-ups, and unauthorized access. Inadequate controls can compromise product quality even when other processes are followed correctly."
+      },
+      {
+        title: "Key requirements",
+        body: "Premises must be suitable, clean, secure, and designed to prevent mix-ups. Temperature and humidity are monitored and controlled where required by product specifications. Equipment is maintained and calibrated as needed. Access is restricted to authorized personnel. Pest control and cleaning programs are implemented and documented. Temperature excursions must be reported and investigated. Alarms are never ignored."
+      },
+      {
+        title: "Day-to-day practices",
         items: [
-          "Use equipment that is clean and in good condition.",
-          "Do not use a unit that is tagged out or out of calibration.",
-          "Report damage, a leak, or a control that will not hold."
+          "Report temperature alarms, equipment failures, pests, or security concerns immediately.",
+          "Do not obstruct sensors, exits, or emergency equipment.",
+          "Store products only in designated locations and correct status areas.",
+          "Maintain cleanliness and order to reduce risk of damage or mix-ups."
+        ]
+      },
+      {
+        title: "Your responsibilities",
+        items: [
+          "Monitor and protect storage conditions.",
+          "Report facility or equipment issues without delay.",
+          "Follow cleaning and maintenance instructions."
         ]
       }
     ],
@@ -85,23 +132,36 @@ window.HS_GDP = [
     id: "gdp-004",
     code: "004",
     title: "Documentation, records, and data integrity",
-    blurb: "If it is not written right, it did not happen.",
-    lead: "GDP records have to be true, complete, and written at the time. A missing or changed record is a compliance problem even if the product is fine.",
+    blurb: "Write it when you do it. A bad record is a finding.",
+    lead: "Applies to all personnel who create or complete records. Version 1, effective November 23, 2026.",
     sections: [
       {
-        title: "How to record",
+        title: "Learning objectives",
         items: [
-          "Write it when you do it. Do not batch the paperwork at the end of the shift.",
-          "Use the approved form. Do not use a scrap note as the record.",
-          "Corrections are a single line, initial, and date. Do not scribble out or use white-out."
+          "Understand the importance of accurate, contemporaneous records under GDP.",
+          "Apply data integrity principles when completing and correcting records.",
+          "Recognize practices that support audit readiness."
         ]
       },
       {
-        title: "Integrity",
+        title: "Why records are critical",
+        body: "Records demonstrate that distribution activities were performed correctly and provide traceability if a problem occurs later. Incomplete, inaccurate, or falsified records create significant compliance and quality risks and are a common focus during inspections."
+      },
+      {
+        title: "Data integrity (ALCOA+)",
+        body: "Records must be Attributable, Legible, Contemporaneous, Original, and Accurate. Additional expectations include completeness and availability. This means the person who performed the work is identifiable, the record is readable, it was written at the time of the activity, it is the first record, and it reflects what actually occurred."
+      },
+      {
+        title: "Practical rules",
+        body: "Complete records in real time using permanent ink. Never backdate or pre-complete entries. To correct an error, draw a single line through the incorrect information, write the correct information nearby, initial and date the correction, and note the reason when required. Do not use correction fluid or obliterate entries. Use only current approved documents. Report missing, incomplete, or incorrect records immediately so they can be addressed."
+      },
+      {
+        title: "Your responsibilities",
         items: [
-          "Do not backdate. Do not sign for someone else.",
-          "If a record is wrong, report it. Do not fix it quietly.",
-          "Keep documents where the procedure says. Do not take them home."
+          "Document activities at the time they are performed.",
+          "Never falsify or backdate records.",
+          "Follow proper correction procedures.",
+          "Report documentation issues promptly."
         ]
       }
     ],
@@ -110,24 +170,45 @@ window.HS_GDP = [
   {
     id: "gdp-005",
     code: "005",
-    title: "Receipt, storage, and inventory",
-    blurb: "Check it in, put it in the right place, know what you have.",
-    lead: "Receiving is where a bad delivery gets stopped. Storage is where status and location keep product from being mixed or lost.",
+    title: "Receipt, storage, and inventory control",
+    blurb: "Check it in, put it in the right status, keep the count true.",
+    lead: "Applies to receiving, warehouse, and inventory personnel. Version 1, effective November 23, 2026.",
     sections: [
       {
-        title: "Receipt",
+        title: "Learning objectives",
         items: [
-          "Match the delivery to the paperwork before you put it away.",
-          "Check seals, damage, and temperature on arrival if the product requires it.",
-          "Hold anything that does not match, is damaged, or is the wrong temperature. Quarantine and report."
+          "Perform accurate receipt verification.",
+          "Maintain proper storage by status, location, and condition.",
+          "Support inventory accuracy and full traceability."
         ]
       },
       {
+        title: "Why this stage matters",
+        body: "Receipt is the first opportunity to identify discrepancies or damage. Correct storage and inventory control ensure that only the right product in the right status is available for use or shipment, and that full traceability is maintained."
+      },
+      {
+        title: "Receipt",
+        body: "Compare physical product to accompanying documentation. Verify quantities, lot numbers, expiry dates, and condition. Document and report any discrepancies or damage. Product remains in a controlled status, typically quarantine, until formally released by Quality."
+      },
+      {
         title: "Storage and inventory",
+        body: "Products are stored under required environmental conditions. Approved, quarantine, returned, and rejected stock are segregated to prevent mix-ups. Stock rotation follows FEFO (First Expired, First Out) or FIFO. System records are updated promptly, and physical counts are performed to confirm accuracy. Discrepancies are investigated."
+      },
+      {
+        title: "Key practices",
         items: [
-          "Right location, right status. Released, quarantine, and reject do not share a spot.",
-          "Rotate by the procedure. Do not bury short-dated product.",
-          "Counts have to match. A variance is reported, not adjusted on your own."
+          "Verify paperwork and condition before accepting product.",
+          "Place product in the correct location and status immediately.",
+          "Never mix lots or statuses without authorization.",
+          "Report damaged, expired, or suspicious product at once."
+        ]
+      },
+      {
+        title: "Your responsibilities",
+        items: [
+          "Execute thorough receipt checks.",
+          "Maintain segregation and correct storage conditions.",
+          "Protect lot traceability."
         ]
       }
     ],
@@ -137,23 +218,44 @@ window.HS_GDP = [
     id: "gdp-006",
     code: "006",
     title: "Picking, packing, and dispatch",
-    blurb: "The right product, the right lot, the right customer.",
-    lead: "Most mix-ups happen at pick and pack. Slow down on the check. A wrong item out the door is a recall.",
+    blurb: "The last check before product leaves the building.",
+    lead: "Applies to pickers, packers, shipping, and dispatch personnel. Version 1, effective November 23, 2026.",
     sections: [
       {
-        title: "Pick and pack",
+        title: "Learning objectives",
         items: [
-          "Pick against the order. Confirm product, lot, quantity, and expiry.",
-          "Do not substitute a lot because it is closer.",
-          "Pack so the product is protected. Label it so it matches the order."
+          "Select the correct product, lot, and quantity.",
+          "Pack to protect product integrity during transport.",
+          "Verify that physical goods match shipping documentation before release."
         ]
       },
       {
-        title: "Dispatch",
+        title: "Why this stage is critical",
+        body: "Picking and dispatch represent the final internal controls before product leaves the facility. Errors at this stage can result in incorrect product reaching a customer or patient and are frequently reviewed during audits."
+      },
+      {
+        title: "Picking and packing",
+        body: "Pick only the product, lot, and quantity specified. Confirm location and status before removal. Package to protect against damage, crushing, and temperature exposure. Follow special handling instructions for temperature-sensitive, fragile, or controlled products."
+      },
+      {
+        title: "Dispatch verification",
+        body: "Before release, confirm that physical goods match the order and shipping documents, labels are accurate, and any required temperature protection is in place. Do not release shipments with unresolved discrepancies."
+      },
+      {
+        title: "Practical steps",
         items: [
-          "Check the shipment against the paperwork before it leaves.",
-          "Temperature-sensitive product goes on a qualified lane, not the next truck.",
-          "If the count or the label is off, stop the shipment and tell a lead."
+          "Double-check product identity, lot, and quantity before sealing.",
+          "Inspect packaging integrity.",
+          "Match documents to the physical shipment.",
+          "Escalate any mismatch or concern before dispatch."
+        ]
+      },
+      {
+        title: "Your responsibilities",
+        items: [
+          "Perform accurate picking and packing.",
+          "Protect product during preparation for shipment.",
+          "Complete all required checks prior to release."
         ]
       }
     ],
@@ -162,24 +264,44 @@ window.HS_GDP = [
   {
     id: "gdp-007",
     code: "007",
-    title: "Transport, temperature, and cold chain",
-    blurb: "The product has to stay in range on the move.",
-    lead: "Cold chain fails in the gap: dock door open, a trailer that was not pre-cooled, a monitor that was not started.",
+    title: "Transportation, temperature control, and cold chain",
+    blurb: "Quality has to hold after the product leaves.",
+    lead: "Applies to shipping, transportation, and warehouse personnel handling outbound goods. Version 1, effective November 23, 2026.",
     sections: [
       {
-        title: "Before it moves",
+        title: "Learning objectives",
         items: [
-          "Confirm the product needs temperature control before you stage it.",
-          "Pre-cool the trailer or container if the procedure requires it.",
-          "Start the monitor. A shipment without a working monitor does not leave."
+          "Identify when temperature control is required.",
+          "Understand actions to take when transport conditions cannot be assured.",
+          "Report issues that may affect product during transit."
         ]
       },
       {
-        title: "On the dock",
+        title: "Maintaining quality in transit",
+        body: "Product quality must be protected after it leaves the warehouse. Temperature-sensitive and cold-chain products can be compromised by excursions. GDP requires suitable packaging, vehicles, and monitoring so that product arrives in the required condition."
+      },
+      {
+        title: "Cold chain and temperature control",
+        body: "The cold chain begins at packing and ends at customer receipt. Appropriate packaging, coolants, insulated shippers, and, where needed, temperature-controlled transport are used. Indicators or data loggers may be included to detect excursions. Product must not be released if required conditions cannot be maintained."
+      },
+      {
+        title: "Reporting and security",
+        body: "Any delay, damage, or suspected temperature issue must be reported immediately so it can be investigated. Vehicles and containers must be suitable, clean, and secure against unauthorized access."
+      },
+      {
+        title: "Required actions",
         items: [
-          "Keep the door closed between loads. Do not stage cold product in the aisle.",
-          "If the range is broken, quarantine the product and report it. Do not ship it and hope.",
-          "Hand off the paperwork with the load. The driver needs the same record you do."
+          "Confirm packaging and temperature protection before release.",
+          "Communicate special handling requirements clearly.",
+          "Do not ship if conditions cannot be assured.",
+          "Report delays, damage, or temperature concerns promptly."
+        ]
+      },
+      {
+        title: "Your responsibilities",
+        items: [
+          "Protect temperature-sensitive product during packing and release.",
+          "Escalate transport-related issues immediately."
         ]
       }
     ],
@@ -189,23 +311,47 @@ window.HS_GDP = [
     id: "gdp-008",
     code: "008",
     title: "Returns, complaints, recalls, and deviations",
-    blurb: "Stop, separate, and report. Do not put it back.",
-    lead: "A return, a complaint, or a recall is not normal inventory. Treat it as held until someone qualified releases it.",
+    blurb: "Hold it, report it, and do not put it back.",
+    lead: "Applies to all personnel, especially warehouse, customer service, and quality staff. Version 1, effective November 23, 2026.",
     sections: [
       {
-        title: "Returns and complaints",
+        title: "Learning objectives",
         items: [
-          "Do not put a return back into stock.",
-          "Quarantine it, label it, and tell a lead the same shift.",
-          "A customer complaint about product quality goes to the Responsible Person. Write what you were told. Do not investigate it yourself."
+          "Handle returned or suspect product correctly.",
+          "Report complaints and deviations promptly.",
+          "Understand the role of recall procedures in protecting patients."
         ]
       },
       {
-        title: "Recalls and deviations",
+        title: "Purpose",
+        body: "Returns, complaints, recalls, and deviations are mechanisms to identify and correct problems that could affect product quality or patient safety. Timely, accurate handling and documentation are required under GDP and are examined during inspections."
+      },
+      {
+        title: "Returns",
+        body: "Returned product must be quarantined immediately and segregated from saleable stock. Quality assesses the product before any further disposition. Returned product is never returned to available inventory without authorization."
+      },
+      {
+        title: "Complaints and deviations",
+        body: "Complaints are expressions of dissatisfaction. Deviations are departures from approved procedures. Both must be recorded and reported without delay so investigation can occur. Corrective and preventive actions are implemented when needed to prevent recurrence."
+      },
+      {
+        title: "Recalls",
+        body: "Recalls remove product from distribution when a quality or safety issue is identified. They must be executed rapidly and fully documented. Personnel involved follow the approved procedure exactly."
+      },
+      {
+        title: "Required actions",
         items: [
-          "A recall hold means that lot does not move. Not to pick, not to ship.",
-          "A deviation is any time the work did not follow the procedure, or the product was at risk.",
-          "Report it when it happens. Do not wait to see if it becomes a problem."
+          "Quarantine returned or suspect product immediately.",
+          "Report complaints, deviations, and quality concerns without delay.",
+          "Follow approved procedures precisely.",
+          "Do not reintroduce returned product without Quality approval."
+        ]
+      },
+      {
+        title: "Your responsibilities",
+        items: [
+          "Protect the supply chain through prompt reporting.",
+          "Support investigations and recall activities as directed."
         ]
       }
     ],
@@ -214,24 +360,44 @@ window.HS_GDP = [
   {
     id: "gdp-009",
     code: "009",
-    title: "Falsified medicines and product identification",
-    blurb: "If the package or the paperwork looks wrong, it is held.",
-    lead: "Falsified product enters through a delivery that does not match. Your job is to notice and stop it, not to decide it is fine.",
+    title: "Prevention of falsified medicines and product identification",
+    blurb: "If it looks wrong, it is held.",
+    lead: "Applies to all personnel handling products. Version 1, effective November 23, 2026.",
     sections: [
       {
-        title: "What to look for",
+        title: "Learning objectives",
         items: [
-          "Packaging or print that looks off. Seals that are damaged or resealed.",
-          "Lot, expiry, or label that does not match the paperwork.",
-          "Product from a source that is not on the approved list."
+          "Recognize indicators of suspect or falsified product.",
+          "Accept product only from approved suppliers.",
+          "Know the correct response to unusual product or documentation."
         ]
       },
       {
-        title: "What to do",
+        title: "The risk",
+        body: "Falsified or diverted products can enter the legitimate supply chain and pose serious risks to patients. GDP requires controls and vigilance by all personnel who handle product to help prevent this."
+      },
+      {
+        title: "Preventive controls",
+        body: "Product is sourced only from approved, qualified suppliers. Packaging, labeling, and security features are examined where applicable. Full traceability is maintained. Any product or delivery that appears unusual is quarantined and reported."
+      },
+      {
+        title: "Warning signs",
+        body: "Indicators may include unusual packaging or print quality, missing or incorrect lot information, damaged seals, product that does not match expectations, or documentation that does not align with the physical goods or supplier."
+      },
+      {
+        title: "Required actions",
         items: [
-          "Do not put it away. Quarantine it.",
-          "Report it the same shift.",
-          "Follow the serialization or track-and-trace step if the product has one. Do not skip the scan."
+          "Inspect packaging and labeling.",
+          "Accept product only from authorized sources.",
+          "Quarantine and report anything suspicious immediately.",
+          "Follow applicable serialization or track-and-trace procedures."
+        ]
+      },
+      {
+        title: "Your responsibilities",
+        items: [
+          "Remain alert for unusual product or packaging.",
+          "Report concerns promptly to protect the supply chain."
         ]
       }
     ],
@@ -240,24 +406,44 @@ window.HS_GDP = [
   {
     id: "gdp-010",
     code: "010",
-    title: "Self-inspection and audits",
-    blurb: "Tell the truth. Audits make the system better.",
-    lead: "Self-inspections find gaps before an outside auditor does. Your part is accurate answers and reported problems.",
+    title: "Self-inspection, continuous improvement, and management review",
+    blurb: "Audits work when people tell the truth.",
+    lead: "Applies to all personnel, supervisors and management especially. Version 1, effective November 23, 2026.",
     sections: [
       {
-        title: "During an audit",
+        title: "Learning objectives",
         items: [
-          "Answer what you know. Do not guess.",
-          "If you do not know, say so and name the person who does.",
-          "Do not hide a problem. A hidden issue becomes a finding."
+          "Understand the purpose and value of self-inspections.",
+          "Support continuous improvement through open reporting.",
+          "Cooperate effectively during audits."
         ]
       },
       {
-        title: "After",
+        title: "Self-inspections",
+        body: "Self-inspections, or internal audits, evaluate whether GDP requirements and internal procedures are being followed. Findings are documented, and corrective actions are tracked to completion. These activities help identify issues before external inspections."
+      },
+      {
+        title: "Continuous improvement and management review",
+        body: "GDP expects the quality system to improve over time. Reporting of risks, near-misses, and improvement ideas supports this. Management periodically reviews quality system performance, including training effectiveness, deviations, and inspection results, to ensure the system remains suitable and effective."
+      },
+      {
+        title: "During audits",
+        body: "Answer questions accurately and completely. Do not speculate or withhold information. If you do not know an answer, state that and identify the appropriate person. Audits are used to strengthen the quality system."
+      },
+      {
+        title: "Expected behaviors",
         items: [
-          "If you are assigned a corrective action, finish it on the date.",
-          "Report a near miss or a better way. That is how the system improves.",
-          "Management reviews the results. Your records are part of that review."
+          "Cooperate fully and honestly with internal and external audits.",
+          "Report opportunities for improvement or potential risks.",
+          "Complete assigned corrective actions on schedule.",
+          "Contribute to an open quality culture."
+        ]
+      },
+      {
+        title: "Your responsibilities",
+        items: [
+          "Support the quality system through accurate communication and timely action.",
+          "View audits as opportunities for improvement."
         ]
       }
     ],

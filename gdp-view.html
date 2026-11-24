@@ -50,19 +50,29 @@
         document.getElementById("title").textContent = item.title;
         var html = "<p class='kicker'>GDP-TRN-" + item.code + "</p><p></p>";
         (item.sections || []).forEach(function (sec) {
-          html += "<h2></h2><div class='box'><ul>";
-          (sec.items || []).forEach(function () { html += "<li></li>"; });
-          html += "</ul></div>";
+          html += "<h2></h2><div class='box'>";
+          if (sec.body) html += "<p class='secbody'></p>";
+          if (sec.items && sec.items.length) {
+            html += "<ul>";
+            sec.items.forEach(function () { html += "<li></li>"; });
+            html += "</ul>";
+          }
+          html += "</div>";
         });
         html += "<div class='signoff'><h2>Sign off — required</h2><p>Fill this in before you leave. Name, site, and date are the record.</p><iframe title='GDP signoff'></iframe></div>";
         body.innerHTML = html;
         body.querySelector("p.kicker + p").textContent = item.lead || "";
         var heads = body.querySelectorAll("h2");
-        var lists = body.querySelectorAll("ul");
+        var boxes = body.querySelectorAll(".box");
         (item.sections || []).forEach(function (sec, i) {
           if (heads[i]) heads[i].textContent = sec.title || "";
+          var box = boxes[i];
+          if (!box) return;
+          var para = box.querySelector("p.secbody");
+          if (para) para.textContent = sec.body || "";
+          var lis = box.querySelectorAll("li");
           (sec.items || []).forEach(function (line, j) {
-            if (lists[i] && lists[i].children[j]) lists[i].children[j].textContent = line;
+            if (lis[j]) lis[j].textContent = line;
           });
         });
         body.querySelector("iframe").src = item.form;
