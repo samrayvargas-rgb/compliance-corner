@@ -98,7 +98,7 @@ window.HS_TRAINING = [
   },
   {
     id: "forklift-pedestrians",
-    on: true,
+    on: false,
     code: "FLT",
     title: "Forklift and pedestrians",
     blurb: "Working safely around forklifts. Read it, then sign off.",
