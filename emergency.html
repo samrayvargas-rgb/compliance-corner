@@ -201,13 +201,16 @@ a.row span { display: block; font-size: 12px; color: var(--muted); margin-top: 4
     .meet { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; margin: 0 0 10px; }
     .meet h3 { margin: 0 0 8px; font-family: "Barlow Condensed", sans-serif; text-transform: uppercase; letter-spacing: .06em; font-size: 15px; color: var(--hs-red); }
     .meet p { margin: 0 0 6px; font-size: 15px; }
+    .meet ul { margin: 0; padding-left: 18px; }
+    .meet li { margin: 0 0 8px; font-size: 15px; line-height: 1.4; }
+    .aed-diagram { display: block; width: 100%; max-width: 360px; margin: 8px auto 0; border-radius: 12px; background: #fff; }
     .emap { width:100%; border-radius:10px; margin-top:10px; background:#fff; display:block; }
   </style>
 </head>
 <body>
   <header class="sub">
     <div class="brand"><img src="logo-header.png" alt="HubStarr Logistics" /></div>
-    <a href="index.html">← Compliance Corner</a>
+    <a href='/'>← Compliance Corner</a>
     <h1>Emergency</h1>
     <p>Tap one. Numbers dial.</p>
   </header>
@@ -280,6 +283,26 @@ a.row span { display: block; font-size: 12px; color: var(--muted); margin-top: 4
         <div class="who">Surprise Police</div>
         <div class="num">623-222-4000</div>
       </a>
+    </div>
+
+
+    <button class="card emg linklike" type="button" onclick="show('aed')">
+      <div class="ico">AED</div>
+      <div class="copy"><h2>AED</h2><p>Cabinet on the wall. Alarm will sound.</p></div>
+    </button>
+    <div id="aed" class="pane">
+      <div class="meet">
+        <h3>Using the AED</h3>
+        <ul>
+          <li>Call 911 first, or have someone call while you open it.</li>
+          <li>Open the cabinet. Take the AED out. It will talk you through it.</li>
+          <li>Bare the chest. Place the pads where the picture shows. Upper right chest. Lower left side.</li>
+          <li>Do not touch the person while it analyzes.</li>
+          <li>If it says clear, everyone steps back. This unit is automatic. It will shock if a shock is needed.</li>
+          <li>Start CPR when it tells you. Keep going until EMS takes over.</li>
+        </ul>
+        <img class="aed-diagram" src="aed-pads.jpg" alt="AED pad placement: upper right chest and lower left side" />
+      </div>
     </div>
 
     <button class="card sds linklike" type="button" onclick="show('spill')">
